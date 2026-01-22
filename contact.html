@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dragon Fist Dojo</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Dragon Fist Dojo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+            <li class="nav-item"><a class="nav-link" href="booking.html">Book Class</a></li>
+            <li class="nav-item"><a class="nav-link" href="belt.html">Belt Progression</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+           <!-- 🌙 Theme Toggle Button -->
+        <button id="themeToggle" class="theme-btn ms-3">🌙</button>
+        </div>
+      </div>
+    </nav>
+    <!-- Contact Banner -->
+    <section class="contact-banner">
+        <h2>Contacts Us</h2>
+    </section>
+    <!-- Contact Section -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Dojo Info -->
+            <div class="col-md-6">
+                <h3>Get in Touch</h3>
+                <p><strong>Address:</strong> 123 Martial Arts Street, Chennai, India</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> info@dragonfistdojo.com</p>
+                 <!-- Google Map Embed -->
+                <div class="mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456!2d80.2707!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267d7!2sChennai%2C%20India!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h3>Send Message</h3>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="footer-container">
+
+            <!-- Menu Links -->
+            <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="classes.html">Classes</a></li>
+            <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
+            <li class="list-inline-item"><a href="belt.html">Belt Progression</a></li>
+            <li class="list-inline-item active"><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="footer-copy">
+            © 2025 Dragon Fist Dojo. All rights reserved.
+            </p>
+        </div>
+        </footer>
+        <!-- Scroll To Top Button -->
+<button id="scrollTopBtn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
