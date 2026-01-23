@@ -1,0 +1,128 @@
+/* Login Form */
+.login-box {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.login-box h3,label {
+  color: red;
+  padding-bottom: 10px;
+}
+h3 {
+  padding-bottom: 15px;
+  color: red;
+}
+.login-box p {
+  color: #000000;
+}
+/* Page Height Minus Navbar */
+.login-page {
+  height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login Box Size Control */
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Input Height */
+.form-control {
+  height: 40px;
+}
+
+/* Social Button */
+.social-btn {
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Forgot Password */
+.forgot-link {
+  float: right;
+  font-size: 13px;
+}
+
+.theme-btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+}
+.social-icons a {
+  text-decoration: none;
+}
+
+/* Center Signup Section */
+.signup-page {
+  height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Signup Box */
+.signup-box {
+  max-width: 430px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+/* Input Height */
+.form-control {
+  height: 40px;
+}
+
+/* Social Icon Buttons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #f5f5f5;
+}
+
+/* Reduce spacing */
+.mb-small {
+  margin-bottom: 8px;
+}
+.social-icons a {
+  background: red;
+  border: none;
+  color: #fff;
+}
+.social-icons a:hover {
+  background: #bf2440;
+}
+.action a {
+  color: red;
+}
+.action a:hover {
+  color: #bf2440;
+}

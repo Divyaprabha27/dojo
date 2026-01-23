@@ -1,112 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belt Progression - Dragon Fist Dojo</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/belt.css">
-    <link rel="stylesheet" href="css/dark.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belt Progression - Dragon Fist Dojo</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/belt.css">
+  <link rel="stylesheet" href="css/dark.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Dragon Fist Dojo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
-            <li class="nav-item"><a class="nav-link" href="booking.html">Book Class</a></li>
-            <li class="nav-item"><a class="nav-link active" href="belt.html">Belt Progression</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <img src="images/logo.png" class="img-fluid" alt="logo">
+      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <!-- CENTER MENU -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="classes.html">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Book Class</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="belt.html">Belt Progression</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
-         <!-- 🌙 Theme Toggle Button -->
-        <button id="themeToggle" class="theme-btn ms-3">🌙</button>
-        </div>
+
+        <!-- RIGHT SIDE LOGIN / SIGNUP -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <!-- Theme Toggle -->
+          <li class="nav-item ms-2">
+            <button id="themeToggle" class="theme-btn">🌙</button>
+          </li>
+        </ul>
+
       </div>
-    </nav>
-    <!-- Belt Progression Banner -->
-     <section class="belt-banner">
-        <h2>Belt Progression</h2>
-    </section>
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Belt Progression</h2>
-        <div class="mb-3">
-            <label>White Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-light" role="progressbar" style="width: 10%">10%</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Yellow Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 25%">25%</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Orange Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-orange" role="progressbar" style="width: 40%">40%</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Green Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 60%">60%</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Brown Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-brown" role="progressbar" style="width: 80%">80%</div>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Black Belt</label>
-            <div class="progress">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 100%">100%</div>
-            </div>
-        </div>
-    </section>
+    </div>
+  </nav>
+  <!-- Belt Progression Banner -->
+  <section class="belt-banner">
+    <h2>Belt Progression</h2>
+  </section>
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Belt Progression</h2>
+    <div class="mb-3">
+      <label>White Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-light" role="progressbar" style="width: 10%">10%</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Yellow Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%">25%</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Orange Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-orange" role="progressbar" style="width: 40%">40%</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Green Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 60%">60%</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Brown Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-brown" role="progressbar" style="width: 80%">80%</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Black Belt</label>
+      <div class="progress">
+        <div class="progress-bar bg-dark" role="progressbar" style="width: 100%">100%</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="custom-footer">
-        <div class="footer-container">
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-container">
 
-            <!-- Menu Links -->
-            <ul class="list-inline">
-            <li class="list-inline-item"><a href="index.html">Home</a></li>
-            <li class="list-inline-item"><a href="classes.html">Classes</a></li>
-            <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
-            <li class="list-inline-item active"><a href="belt.html">Belt Progression</a></li>
-            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-            </ul>
+      <!-- Menu Links -->
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="classes.html">Classes</a></li>
+        <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
+        <li class="list-inline-item active"><a href="belt.html">Belt Progression</a></li>
+        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+      </ul>
 
-            <!-- Social Icons -->
-            <div class="footer-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+      <!-- Social Icons -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
 
-            <!-- Copyright -->
-           <p class="footer-copy">
-            © 2025 Dragon Fist Dojo. All rights reserved.
-            </p>
-        </div>
-        </footer>
-        <!-- Scroll To Top Button -->
-<button id="scrollTopBtn">
-  <i class="fas fa-arrow-up"></i>
-</button>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+      <!-- Copyright -->
+      <p class="footer-copy">
+        © 2025 Dragon Fist Dojo. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

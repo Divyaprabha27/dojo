@@ -1,217 +1,261 @@
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Dragon Fist Dojo</title>
-                        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-                        <link rel="stylesheet" href="css/style.css">
-                        <link rel="stylesheet" href="css/dark.css">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-                    </head>
-                    <body>
-                        <!-- Navbar -->
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Dragon Fist Dojo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Fist Dojo</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/logo.png" class="img-fluid" alt="logo">
+            <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="booking.html">Book Class</a></li>
-                    <li class="nav-item"><a class="nav-link" href="belt.html">Belt Progression</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- CENTER MENU -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="belt.html">Belt Progression</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
-                <!-- 🌙 Theme Toggle Button -->
-        <button id="themeToggle" class="theme-btn ms-3">🌙</button>
+
+                <!-- RIGHT SIDE LOGIN / SIGNUP -->
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <!-- Theme Toggle -->
+                    <li class="nav-item ms-2">
+                        <button id="themeToggle" class="theme-btn">🌙</button>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white d-flex align-items-center justify-content-center">
+        <div>
+            <h1>Train Your Mind. Strengthen Your Body. Master Your Spirit.</h1>
+            <a href="booking.html" class="btn btn-danger btn-lg mt-3">Book Free Trial</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/about-us-image.jpg" class="img-fluid abt-info" alt="about-image" />
+                </div>
+                <div class="col-6">
+                    <h6>About Us</h6>
+                    <h3>Creating strong bodies and even stronger minds</h3>
+                    <p>We focus on building physical strength, mental discipline, and lasting confidence. Through
+                        structured training, students learn respect, focus.</p>
+                    <p>Martial arts are codified systems and traditions of combat practices, which are practiced for a
+                        number of reasons: as self-defense, military and law enforcement applications, mental and
+                        spiritual development, and cultural heritage.</p>
+                    <div class="row abt-class">
+                        <div class="col-6 ">
+                            <img src="images/mission.jpg" class="img-fluid" alt="mission" />
+                            <h5>Our Mission</h5>
+                            <p>We train students to move strength and live with confidence.</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/vision.jpg" class="img-fluid" alt="vision" />
+                            <h5>Our Vision</h5>
+                            <p>We train students to move strength and live with confidence.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </nav>
+        </div>
+    </section>
 
-                        <!-- Hero Section -->
-                        <section class="hero text-center text-white d-flex align-items-center justify-content-center">
-                            <div>
-                                <h1>Train Your Mind. Strengthen Your Body. Master Your Spirit.</h1>
-                                <a href="booking.html" class="btn btn-danger btn-lg mt-3">Book Free Trial</a>
-                            </div>
-                        </section>
-
-                        <!-- About Section -->
-                        <section class="about">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img src="images/about-us-image.jpg" class="img-fluid abt-info" alt="about-image"/>
-                                    </div>
-                                    <div class="col-6">
-                                        <h6>About Us</h6>
-                                        <h3>Creating strong bodies and even stronger minds</h3>
-                                        <p>We focus on building physical strength, mental discipline, and lasting confidence. Through structured training, students learn respect, focus.</p>
-                                        <p>Martial arts are codified systems and traditions of combat practices, which are practiced for a number of reasons: as self-defense, military and law enforcement applications, mental and spiritual development, and cultural heritage.</p>
-                                        <div class="row abt-class">
-                                            <div class="col-6 ">
-                                                <img src="images/mission.jpg" class="img-fluid" alt="mission"/>
-                                                <h5>Our Mission</h5>
-                                                <p>We train students to move strength and live with confidence.</p>
-                                            </div>
-                                            <div class="col-6">
-                                                <img src="images/vision.jpg" class="img-fluid" alt="vision"/>
-                                                <h5>Our Vision</h5>
-                                                <p>We train students to move strength and live with confidence.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Classes Preview -->
-                        <section class="program">
-                            <div class="container">
-                            <h2 class="text-center mb-4">Our Programs</h2>
-                            <div class="row g-4">
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="card-class">
-                                        <div class="card-body">
-                                            <img src="images/img1.jpg" class="img-fluid" alt="Kids Karatae" />
-                                            <h5 class="card-title">Kids Karate</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="card-class">
-                                        <div class="card-body">
-                                            <img src="images/img2.jpg" class="img-fluid" alt="Teen Taekwondo" />
-                                            <h5 class="card-title">Teen Taekwondo</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="card-class">
-                                        <div class="card-body">
-                                            <img src="images/img3.jpg" class="img-fluid" alt="Adult MMA" />
-                                            <h5 class="card-title">Adult MMA</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="card-class">
-                                        <div class="card-body">
-                                            <img src="images/img4.jpg" class="img-fluid" alt="Self Defense" />
-                                            <h5 class="card-title">Self Defense</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </section>
-                        <!-- Why Choose Us-->
-                        <section class="choose">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <h6>Why Choose Us</h6>
-                                        <h3>Why students grow stronger with our guidance</h3>
-                                        <p>With consistent training, focused instruction, and real encouragement, students unlock their true potential and become stronger every day.</p>
-                                        <div class="row focus">
-                                            <div class="col-3">
-                                                <img src="images/choose1.jpg" class="img-fluid" alt="choose1" />
-                                            </div>
-                                            <div class="col-9">
-                                                <h5>Focus on Discipline and Confidence</h5>
-                                                <p>We help students develop patience, respect, and a positive mindset. Through structured training, they learn to stay focused.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row focus">
-                                            <div class="col-3">
-                                                <img src="images/choose2.jpg" class="img-fluid" alt="choose1" />
-                                            </div>
-                                            <div class="col-9">
-                                                <h5>Focus on Discipline and Confidence</h5>
-                                                <p>We help students develop patience, respect, and a positive mindset. Through structured training, they learn to stay focused.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="choose1">
-                                            <img src="images/choose-bnr1.jpg" class="img-fluid" alt="why choose"/>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Expert Trainees -->
-                        <section class="trainers">
-                            <div class="container">
-                                <h6>Expert Trainers</h6>
-                                <h3>Professional martial arts trainers guiding<br> your journey</h3>
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="images/team-1.jpg" class="img-fluid" alt="team1"/>
-                                        <h5>Ethan Walker</h5>
-                                        <p>Martial Arts Trainer</p>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="images/team-2.jpg" class="img-fluid" alt="team1"/>
-                                        <h5>Sophia Martinez</h5>
-                                        <p>Championship Coach</p>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="images/team-3.jpg" class="img-fluid" alt="team1"/>
-                                        <h5>Lucas Bennett</h5>
-                                        <p>Self-Defense Specialist</p>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-12">
-                                        <img src="images/team-4.jpg" class="img-fluid" alt="team1"/>
-                                        <h5>Olivia Harris</h5>
-                                        <p>Junior Program Mentor</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Footer -->
-                <footer class="custom-footer">
-                <div class="footer-container">
-
-                    <!-- Menu Links -->
-                    <ul class="list-inline">
-                    <li class="list-inline-item active"><a href="index.html">Home</a></li>
-                    <li class="list-inline-item"><a href="classes.html">Classes</a></li>
-                    <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
-                    <li class="list-inline-item"><a href="belt.html">Belt Progression</a></li>
-                    <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                    </ul>
-
-                    <!-- Social Icons -->
-                    <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+    <!-- Classes Preview -->
+    <section class="program">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Programs</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card-class">
+                        <div class="card-body">
+                            <img src="images/img1.jpg" class="img-fluid" alt="Kids Karatae" />
+                            <h5 class="card-title">Kids Karate</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card-class">
+                        <div class="card-body">
+                            <img src="images/img2.jpg" class="img-fluid" alt="Teen Taekwondo" />
+                            <h5 class="card-title">Teen Taekwondo</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card-class">
+                        <div class="card-body">
+                            <img src="images/img3.jpg" class="img-fluid" alt="Adult MMA" />
+                            <h5 class="card-title">Adult MMA</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card-class">
+                        <div class="card-body">
+                            <img src="images/img4.jpg" class="img-fluid" alt="Self Defense" />
+                            <h5 class="card-title">Self Defense</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sedo eiusmod.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us-->
+    <section class="choose">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <h6>Why Choose Us</h6>
+                    <h3>Why students grow stronger with our guidance</h3>
+                    <p>With consistent training, focused instruction, and real encouragement, students unlock their true
+                        potential and become stronger every day.</p>
+                    <div class="row focus">
+                        <div class="col-3">
+                            <img src="images/choose1.jpg" class="img-fluid" alt="choose1" />
+                        </div>
+                        <div class="col-9">
+                            <h5>Focus on Discipline and Confidence</h5>
+                            <p>We help students develop patience, respect, and a positive mindset. Through structured
+                                training, they learn to stay focused.</p>
+                        </div>
+                    </div>
+                    <div class="row focus">
+                        <div class="col-3">
+                            <img src="images/choose2.jpg" class="img-fluid" alt="choose1" />
+                        </div>
+                        <div class="col-9">
+                            <h5>Focus on Discipline and Confidence</h5>
+                            <p>We help students develop patience, respect, and a positive mindset. Through structured
+                                training, they learn to stay focused.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="choose1">
+                        <img src="images/choose-bnr1.jpg" class="img-fluid" alt="why choose" />
                     </div>
 
-                    <!-- Copyright -->
-                    <p class="footer-copy">
-                    © 2025 Dragon Fist Dojo. All rights reserved.
-                    </p>
                 </div>
-                </footer>
-                <!-- Scroll To Top Button -->
-<button id="scrollTopBtn">
-  <i class="fas fa-arrow-up"></i>
-</button>
+            </div>
+        </div>
+    </section>
+    <!-- Expert Trainees -->
+    <section class="trainers">
+        <div class="container">
+            <h6>Expert Trainers</h6>
+            <h3>Professional martial arts trainers guiding<br> your journey</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/team-1.jpg" class="img-fluid" alt="team1" />
+                    <h5>Ethan Walker</h5>
+                    <p>Martial Arts Trainer</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/team-2.jpg" class="img-fluid" alt="team1" />
+                    <h5>Sophia Martinez</h5>
+                    <p>Championship Coach</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/team-3.jpg" class="img-fluid" alt="team1" />
+                    <h5>Lucas Bennett</h5>
+                    <p>Self-Defense Specialist</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/team-4.jpg" class="img-fluid" alt="team1" />
+                    <h5>Olivia Harris</h5>
+                    <p>Junior Program Mentor</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <script src="bootstrap/js/bootstrap.min.js"></script>
-                        <script src="js/script.js"></script>
-                    </body>
-                    </html>
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="footer-container">
+
+            <!-- Menu Links -->
+            <ul class="list-inline">
+                <li class="list-inline-item active"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="classes.html">Classes</a></li>
+                <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
+                <li class="list-inline-item"><a href="belt.html">Belt Progression</a></li>
+                <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="footer-copy">
+                © 2025 Dragon Fist Dojo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

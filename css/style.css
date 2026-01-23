@@ -3,6 +3,11 @@ body {
   color: #111;
   transition: 0.3s ease;
 }
+/* header */
+.navbar-collapse li {
+    padding: 0 5px;
+    text-align: center;
+}
 .hero {
     background: url('../images/home-banner.jpg') center/cover no-repeat;
     height: 60vh;

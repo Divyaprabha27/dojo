@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard - Dragon Fist Dojo</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/dark.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <img src="images/logo.png" class="img-fluid" alt="logo">
+      
+    <span class="navbar-brand">Dragon Fist Dojo</span>
+
+    <div>
+      <button id="themeToggle" class="theme-btn me-3">🌙</button>
+      <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-md-2 sidebar">
+
+      <a href="dashboard.html" class="active">
+        <i class="fas fa-home me-2"></i> Dashboard
+      </a>
+
+      <a href="#">
+        <i class="fas fa-user me-2"></i> Profile
+      </a>
+
+      <a href="#">
+        <i class="fas fa-calendar-check me-2"></i> Bookings
+      </a>
+
+      <a href="#">
+        <i class="fas fa-chart-line me-2"></i> Progress
+      </a>
+
+      <a href="#">
+        <i class="fas fa-users me-2"></i> Students
+      </a>
+
+      <a href="#">
+        <i class="fas fa-cog me-2"></i> Settings
+      </a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-10 main-content">
+
+      <h3 class="mb-4">Welcome Back, Student 👋</h3>
+
+      <!-- Stats Row -->
+      <div class="row">
+
+        <div class="col-md-3 mb-3">
+          <div class="stat-card text-center">
+            <h4>12</h4>
+            <p>Total Classes</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="stat-card text-center">
+            <h4>5</h4>
+            <p>Upcoming Sessions</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="stat-card text-center">
+            <h4>Yellow</h4>
+            <p>Current Belt</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="stat-card text-center">
+            <h4>85%</h4>
+            <p>Attendance</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="mt-4">
+
+        <h5>Recent Activity</h5>
+
+        <table class="table table-bordered mt-3 bg-white">
+
+          <thead class="table-dark">
+            <tr>
+              <th>Date</th>
+              <th>Activity</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>20 Jan 2026</td>
+              <td>Karate Training</td>
+              <td>Completed</td>
+            </tr>
+
+            <tr>
+              <td>22 Jan 2026</td>
+              <td>Self Defense Class</td>
+              <td>Upcoming</td>
+            </tr>
+
+            <tr>
+              <td>25 Jan 2026</td>
+              <td>Belt Test</td>
+              <td>Scheduled</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

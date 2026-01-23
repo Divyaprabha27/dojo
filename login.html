@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Dragon Fist Dojo</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <img src="images/logo.png" class="img-fluid" alt="logo">
+      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- CENTER MENU -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="belt.html">Belt Progression</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- RIGHT SIDE LOGIN / SIGNUP -->
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <!-- Theme Toggle -->
+                    <li class="nav-item ms-2">
+                        <button id="themeToggle" class="theme-btn">🌙</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <div class="login-page">
+
+        <div class="container">
+
+            <div class="login-box bg-white">
+
+                <h3 class="text-center mb-2">Login</h3>
+
+                <!-- Login Form -->
+                <form>
+
+                    <div class="mb-2">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="mb-1">
+                        <label>Password</label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                        <input type="password" class="form-control" placeholder="Enter password" required>
+                    </div>
+
+                    <button class="btn btn-danger w-100 mt-2">
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- Divider -->
+                <div class="text-center my-2">
+                    <small>OR</small>
+                </div>
+
+                <!-- Social Icon Buttons -->
+                <div class="social-icons">
+
+                    <a href="#" title="Signup with Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+
+                    <a href="#" title="Signup with Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+                <!-- Signup Link -->
+                <p class="text-center mt-1 mb-0 action">
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
