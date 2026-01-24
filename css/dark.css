@@ -2,10 +2,12 @@
 .navbar a:hover {
   color: red;
 }
+
 /* Footer */
 footer li a:hover {
   color: red;
 }
+
 .dark-mode {
   background: #0d0d0d;
   color: #f1f1f1;
@@ -17,7 +19,12 @@ footer li a:hover {
 }
 
 /* Cards */
-.dark-mode .card-class {
+/* Cards */
+.dark-mode .card-class,
+.dark-mode .belt-card,
+.dark-mode .pricing-card,
+.dark-mode .feature-box,
+.dark-mode .testimonial-card {
   background: #1a1a1a;
   color: #fff;
 }
@@ -35,15 +42,32 @@ footer li a:hover {
   background: radial-gradient(circle at center, #222 0%, #000 70%);
 }
 
-.dark-mode .list-inline a {
-    color: #fff;
+.dark-mode footer h5,
+.dark-mode footer p,
+.dark-mode footer ul li a,
+.dark-mode .footer-copy,
+.dark-mode footer .text-muted {
+  color: #fff !important;
 }
-.dark-mode .active a {
-    color: red;
+
+.dark-mode footer ul li a:hover {
+  color: red;
 }
+
+.dark-mode .footer-social i {
+  background: #fff;
+  color: #000;
+}
+
+.dark-mode .footer-social i:hover {
+  background: red;
+  color: #fff;
+}
+
 .dark-mode .abt-class p {
-    color: #000;
+  color: #000;
 }
+
 .theme-btn {
   border: none;
   background: transparent;
@@ -51,6 +75,7 @@ footer li a:hover {
   cursor: pointer;
   color: white;
 }
+
 /* Scroll Button */
 #scrollTopBtn {
   position: fixed;

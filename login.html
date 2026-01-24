@@ -15,59 +15,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
 
-            <img src="images/logo.png" class="img-fluid" alt="logo">
-      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <!-- CENTER MENU -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="classes.html">Classes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="booking.html">Book Class</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="belt.html">Belt Progression</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-
-                <!-- RIGHT SIDE LOGIN / SIGNUP -->
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="login.html">Login</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
-                    </li>
-                    <!-- Theme Toggle -->
-                    <li class="nav-item ms-2">
-                        <button id="themeToggle" class="theme-btn">🌙</button>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
 
     <!-- Login Section -->
     <div class="login-page">
@@ -82,14 +30,18 @@
                 <form>
 
                     <div class="mb-2">
-                        <label>Email</label>
                         <input type="email" class="form-control" placeholder="Enter email" required>
                     </div>
 
-                    <div class="mb-1">
-                        <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password"
+                        style="margin-bottom: 15px;" required>
+
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe" style="color: #000;">Remember Me</label>
+                        </div>
                         <a href="#" class="forgot-link">Forgot Password?</a>
-                        <input type="password" class="form-control" placeholder="Enter password" required>
                     </div>
 
                     <button class="btn btn-danger w-100 mt-2">
@@ -107,11 +59,11 @@
                 <div class="social-icons">
 
                     <a href="#" title="Signup with Google">
-                        <i class="fab fa-google"></i>
+                        <i class="fab fa-google"></i> Continue with Google
                     </a>
 
                     <a href="#" title="Signup with Facebook">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i> Continue with Facebook
                     </a>
 
                 </div>

@@ -15,8 +15,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <img src="images/logo.png" class="img-fluid" alt="logo">
-      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding-top: 0;">
+                <img src="images/logo.png" class="img-fluid me-2" alt="logo" style="max-height: 40px;">
+                Dragon Dojo
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,63 +68,171 @@
     <section class="booking-banner">
         <h2>Bookings</h2>
     </section>
+    <!-- What to Expect -->
     <section class="container my-5">
-        <h2 class="text-center mb-4">Book Your Class</h2>
-        <form id="bookingForm" class="mx-auto" style="max-width:600px;">
-            <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" required>
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <div class="feature-box p-4">
+                    <i class="fas fa-clock fa-3x text-danger mb-3"></i>
+                    <h4>Arrive Early</h4>
+                    <p>Please arrive 15 minutes before your scheduled class to meet the instructor and get settled.</p>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+            <div class="col-md-4">
+                <div class="feature-box p-4">
+                    <i class="fas fa-tshirt fa-3x text-danger mb-3"></i>
+                    <h4>What to Wear</h4>
+                    <p>Wear comfortable workout clothes. We train barefoot on the mats for safety and hygiene.</p>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" required>
+            <div class="col-md-4">
+                <div class="feature-box p-4">
+                    <i class="fas fa-smile fa-3x text-danger mb-3"></i>
+                    <h4>Have Fun</h4>
+                    <p>Our classes are designed to be challenging but enjoyable. Bring a positive attitude!</p>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="classSelect" class="form-label">Select Class</label>
-                <select class="form-select" id="classSelect" required>
-                    <option value="">Choose...</option>
-                    <option>Kids Karate</option>
-                    <option>Teen Taekwondo</option>
-                    <option>Adult MMA</option>
-                    <option>Self Defense</option>
-                </select>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="container my-5 bg-light p-5 rounded shadow-sm">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-3">Book Your Free Trial Class</h2>
+                <p class="text-center text-muted mb-4">Ready to start your journey? Fill out the form below to reserve
+                    your spot.</p>
+
+                <form id="bookingForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="classSelect" class="form-label">Select Class</label>
+                            <select class="form-select" id="classSelect" required>
+                                <option value="">Choose...</option>
+                                <option>Kids Karate</option>
+                                <option>Teen Taekwondo</option>
+                                <option>Adult MMA</option>
+                                <option>Self Defense</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Additional Notes (Optional)</label>
+                        <textarea class="form-control" id="notes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger w-100 btn-lg">Confirm Booking</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="date" class="form-label">Preferred Date</label>
-                <input type="date" class="form-control" id="date" required>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Student Stories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 border rounded text-center h-100">
+                    <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="fst-italic">"The instructors here are amazing. My son has gained so much confidence since
+                        joining the Kids Karate program."</p>
+                    <h6 class="mt-3 fw-bold">- Sarah J.</h6>
+                </div>
             </div>
-            <button type="submit" class="btn btn-danger w-100">Submit Booking</button>
-        </form>
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 border rounded text-center h-100">
+                    <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="fst-italic">"I've tried many gyms, but Dragon Fist Dojo is different. The community is
+                        supportive and the training is top-notch."</p>
+                    <h6 class="mt-3 fw-bold">- Mike T.</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 border rounded text-center h-100">
+                    <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="fst-italic">"The Self Defense class gave me practical skills and peace of mind. Highly
+                        recommend to everyone!"</p>
+                    <h6 class="mt-3 fw-bold">- Emily R.</h6>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Footer -->
     <footer class="custom-footer">
-        <div class="footer-container">
+        <div class="container">
+            <div class="row">
 
-            <!-- Menu Links -->
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="index.html">Home</a></li>
-                <li class="list-inline-item"><a href="classes.html">Classes</a></li>
-                <li class="list-inline-item active"><a href="booking.html">Book Class</a></li>
-                <li class="list-inline-item"><a href="belt.html">Belt Progression</a></li>
-                <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-            </ul>
+                <!-- Column 1: About -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>About</h5>
+                    <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training
+                        since 2010.</p>
+                </div>
 
-            <!-- Social Icons -->
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="booking.html">Book Class</a></li>
+                        <li><a href="belt.html">Belt Progression</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Programs -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Our Programs</h5>
+                    <ul>
+                        <li><a href="classes.html">Kids Karate</a></li>
+                        <li><a href="classes.html">Teen Taekwondo</a></li>
+                        <li><a href="classes.html">Adult MMA</a></li>
+                        <li><a href="classes.html">Self Defense</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2 text-danger"></i> 123 Martial Arts St, Chennai</li>
+                        <li><i class="fas fa-phone me-2 text-danger"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope me-2 text-danger"></i> info@dragonfist.com</li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Copyright -->
             <p class="footer-copy">
-                © 2025 Dragon Fist Dojo. All rights reserved.
+                © 2025 Dragon Dojo. All rights reserved.
             </p>
         </div>
     </footer>

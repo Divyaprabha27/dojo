@@ -15,8 +15,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <img src="images/logo.png" class="img-fluid" alt="logo">
-      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding-top: 0;">
+        <img src="images/logo.png" class="img-fluid me-2" alt="logo" style="max-height: 40px;">
+        Dragon Dojo
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,70 +68,251 @@
   <section class="contact-banner">
     <h2>Classes</h2>
   </section>
+
+  <!-- Class Descriptions -->
   <section class="container my-5">
-    <h2 class="text-center mb-4">Our Classes</h2>
-    <table class="table table-striped text-center">
-      <thead class="table-dark">
-        <tr>
-          <th>Class Name</th>
-          <th>Age Group</th>
-          <th>Days</th>
-          <th>Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Kids Karate</td>
-          <td>6-12 yrs</td>
-          <td>Mon/Wed/Fri</td>
-          <td>5:00 PM</td>
-        </tr>
-        <tr>
-          <td>Teen Taekwondo</td>
-          <td>13-18 yrs</td>
-          <td>Tue/Thu</td>
-          <td>6:00 PM</td>
-        </tr>
-        <tr>
-          <td>Adult MMA</td>
-          <td>18+ yrs</td>
-          <td>Mon-Fri</td>
-          <td>7:00 PM</td>
-        </tr>
-        <tr>
-          <td>Self Defense</td>
-          <td>All Ages</td>
-          <td>Sat</td>
-          <td>10:00 AM</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="images/img1.jpg" class="img-fluid rounded" alt="Kids Karate">
+      </div>
+      <div class="col-md-6">
+        <h3>Kids Karate</h3>
+        <p>Our Kids Karate program is designed to build confidence, discipline, and respect. Children learn the
+          fundamentals of self-defense while improving their coordination and focus. It's a fun and safe environment for
+          kids to grow.</p>
+        <ul class="list-unstyled">
+          <li>Basic Techniques</li>
+          <li>Discipline & Focus</li>
+          <li>Self-Confidence Building</li>
+        </ul>
+        <a href="booking.html" class="btn btn-danger">Book a Trial</a>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <img src="images/img2.jpg" class="img-fluid rounded" alt="Teen Taekwondo">
+      </div>
+      <div class="col-md-6">
+        <h3>Teen Taekwondo</h3>
+        <p>Teenagers face unique challenges, and our Taekwondo program helps them navigate this phase with strength and
+          composure. We emphasize fitness, goal setting, and practical self-defense skills.</p>
+        <ul class="list-unstyled">
+          <li>Advanced Kicking</li>
+          <li>Competitive Sparring</li>
+          <li>Leadership Skills</li>
+        </ul>
+        <a href="booking.html" class="btn btn-danger">Book a Trial</a>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="images/img3.jpg" class="img-fluid rounded" alt="Adult MMA">
+      </div>
+      <div class="col-md-6">
+        <h3>Adult MMA</h3>
+        <p>Get in the best shape of your life while learning effective combat techniques. Our MMA classes combine
+          striking, grappling, and conditioning to give you a complete workout and real-world skills.</p>
+        <ul class="list-unstyled">
+          <li>Striking & Grappling</li>
+          <li>High-Intensity Conditioning</li>
+          <li>Stress Relief</li>
+        </ul>
+        <a href="booking.html" class="btn btn-danger">Book a Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Table -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Class Schedule</h2>
+    <div class="table-responsive">
+      <table class="table table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Class Name</th>
+            <th>Age Group</th>
+            <th>Days</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kids Karate</td>
+            <td>6-12 yrs</td>
+            <td>Mon/Wed/Fri</td>
+            <td>5:00 PM</td>
+          </tr>
+          <tr>
+            <td>Teen Taekwondo</td>
+            <td>13-18 yrs</td>
+            <td>Tue/Thu</td>
+            <td>6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Adult MMA</td>
+            <td>18+ yrs</td>
+            <td>Mon-Fri</td>
+            <td>7:00 PM</td>
+          </tr>
+          <tr>
+            <td>Self Defense</td>
+            <td>All Ages</td>
+            <td>Sat</td>
+            <td>10:00 AM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Membership Plans</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="pricing-card text-center p-4 border rounded">
+          <h4>Basic</h4>
+          <h2 class="text-danger">$99<small>/mo</small></h2>
+          <ul class="list-unstyled my-3">
+            <li>2 Classes / Week</li>
+            <li>No Commitment</li>
+            <li>Basic Gear Included</li>
+          </ul>
+          <a href="booking.html" class="btn btn-outline-danger w-100">Sign Up</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-card text-center p-4 border rounded bg-light">
+          <h4>Standard</h4>
+          <h2 class="text-danger">$149<small>/mo</small></h2>
+          <ul class="list-unstyled my-3">
+            <li>Unlimited Classes</li>
+            <li>Gym Access</li>
+            <li>Free Uniform</li>
+          </ul>
+          <a href="booking.html" class="btn btn-danger w-100">Sign Up</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pricing-card text-center p-4 border rounded">
+          <h4>Premium</h4>
+          <h2 class="text-danger">$199<small>/mo</small></h2>
+          <ul class="list-unstyled my-3">
+            <li>Unlimited Classes</li>
+            <li>Private Training (1/mo)</li>
+            <li>Family Discount</li>
+          </ul>
+          <a href="booking.html" class="btn btn-outline-danger w-100">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Do I need prior experience?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No! We welcome students of all levels, from complete beginners to advanced martial artists. Our instructors
+            will guide you every step of the way.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo">
+            What should I wear?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            For your first class, wear comfortable workout clothes. Once you join, you wil be provided with a uniform
+            (Gi) relevant to your discipline.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree">
+            Is sparring mandatory?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sparring is an optional part of our advanced curriculum. We prioritize safety and technical proficiency
+            before introducing live sparring.
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- Footer -->
   <footer class="custom-footer">
-    <div class="footer-container">
+    <div class="container">
+      <div class="row">
 
-      <!-- Menu Links -->
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="index.html">Home</a></li>
-        <li class="list-inline-item active"><a href="classes.html">Classes</a></li>
-        <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
-        <li class="list-inline-item"><a href="belt.html">Belt Progression</a></li>
-        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-      </ul>
+        <!-- Column 1: About -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>About</h5>
+          <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training since
+            2010.
+          </p>
+        </div>
 
-      <!-- Social Icons -->
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="booking.html">Book Class</a></li>
+            <li><a href="belt.html">Belt Progression</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Programs -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Our Programs</h5>
+          <ul>
+            <li><a href="classes.html">Kids Karate</a></li>
+            <li><a href="classes.html">Teen Taekwondo</a></li>
+            <li><a href="classes.html">Adult MMA</a></li>
+            <li><a href="classes.html">Self Defense</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-muted">
+            <li><i class="fas fa-map-marker-alt me-2 text-danger"></i> 123 Martial Arts St, Chennai</li>
+            <li><i class="fas fa-phone me-2 text-danger"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope me-2 text-danger"></i> info@dragonfist.com</li>
+          </ul>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
       </div>
 
       <!-- Copyright -->
       <p class="footer-copy">
-        © 2025 Dragon Fist Dojo. All rights reserved.
+        © 2025 Dragon Dojo. All rights reserved.
       </p>
     </div>
   </footer>

@@ -15,8 +15,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <img src="images/logo.png" class="img-fluid" alt="logo">
-      <a class="navbar-brand" href="index.html" style="padding-top: 0;">Dragon Fist Dojo</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding-top: 0;">
+        <img src="images/logo.png" class="img-fluid me-2" alt="logo" style="max-height: 40px;">
+        Dragon Dojo
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,70 +69,142 @@
     <h2>Belt Progression</h2>
   </section>
   <section class="container my-5">
-    <h2 class="text-center mb-4">Belt Progression</h2>
-    <div class="mb-3">
-      <label>White Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-light" role="progressbar" style="width: 10%">10%</div>
+    <h2 class="text-center mb-5">Road to Black Belt</h2>
+
+    <!-- Philosophy Section -->
+    <div class="row mb-5 justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="lead">"A black belt is a white belt who never gave up."</p>
+        <p>At Dragon Fist Dojo, we believe that rank is not just about the color of your belt, but the content of your
+          character. Progression requires dedication, humility, and a constant drive to improve.</p>
       </div>
     </div>
-    <div class="mb-3">
-      <label>Yellow Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%">25%</div>
+
+    <!-- Belt Timeline -->
+    <div class="row g-4">
+
+      <!-- White Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #e0e0e0 !important;">
+          <h4>White Belt</h4>
+          <p class="text-muted small">0 - 6 Months</p>
+          <p><strong>Focus:</strong> Fundamentals, Etiquette, Basic Stances.</p>
+          <p>The beginning of the journey. Students learn the dojo culture and the core movements that form the
+            foundation of all martial arts.</p>
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label>Orange Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-orange" role="progressbar" style="width: 40%">40%</div>
+
+      <!-- Yellow Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #ffc107 !important;">
+          <h4>Yellow Belt</h4>
+          <p class="text-muted small">6 - 12 Months</p>
+          <p><strong>Focus:</strong> Balance, Coordination, Core Techniques.</p>
+          <p>Students begin to chain movements together and develop a deeper understanding of body mechanics.</p>
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label>Green Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 60%">60%</div>
+
+      <!-- Orange Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #fd7e14 !important;">
+          <h4>Orange Belt</h4>
+          <p class="text-muted small">12 - 18 Months</p>
+          <p><strong>Focus:</strong> Combinations, Sparring Drills, Speed.</p>
+          <p>Introduction to dynamic movement and partner drills. Improving reaction time is a key goal.</p>
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label>Brown Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-brown" role="progressbar" style="width: 80%">80%</div>
+
+      <!-- Green Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #198754 !important;">
+          <h4>Green Belt</h4>
+          <p class="text-muted small">18 - 24 Months</p>
+          <p><strong>Focus:</strong> Advanced Kicks, Grappling Basics, Power.</p>
+          <p>Students start to specialize and refine their techniques. Physical conditioning becomes more intense.</p>
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label>Black Belt</label>
-      <div class="progress">
-        <div class="progress-bar bg-dark" role="progressbar" style="width: 100%">100%</div>
+
+      <!-- Brown Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #795548 !important;">
+          <h4>Brown Belt</h4>
+          <p class="text-muted small">2 - 3 Years</p>
+          <p><strong>Focus:</strong> Strategy, Leadership, Live Sparring.</p>
+          <p>The final steps before mastery. Brown belts are expected to mentor junior students and demonstrate flawless
+            technique.</p>
+        </div>
       </div>
+
+      <!-- Black Belt -->
+      <div class="col-md-6 col-lg-4">
+        <div class="belt-card p-4 border rounded h-100" style="border-top: 5px solid #000000 !important;">
+          <h4>Black Belt</h4>
+          <p class="text-muted small">3+ Years</p>
+          <p><strong>Focus:</strong> Mastery, Teaching, Lifelong Learning.</p>
+          <p>Not the end, but a new beginning. A symbol of expertise and the responsibility to pass on knowledge.</p>
+        </div>
+      </div>
+
     </div>
+
   </section>
 
   <!-- Footer -->
   <footer class="custom-footer">
-    <div class="footer-container">
+    <div class="container">
+      <div class="row">
 
-      <!-- Menu Links -->
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="index.html">Home</a></li>
-        <li class="list-inline-item"><a href="classes.html">Classes</a></li>
-        <li class="list-inline-item"><a href="booking.html">Book Class</a></li>
-        <li class="list-inline-item active"><a href="belt.html">Belt Progression</a></li>
-        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-      </ul>
+        <!-- Column 1: About -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>About</h5>
+          <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training since
+            2010.
+          </p>
+        </div>
 
-      <!-- Social Icons -->
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="booking.html">Book Class</a></li>
+            <li><a href="belt.html">Belt Progression</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Programs -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Our Programs</h5>
+          <ul>
+            <li><a href="classes.html">Kids Karate</a></li>
+            <li><a href="classes.html">Teen Taekwondo</a></li>
+            <li><a href="classes.html">Adult MMA</a></li>
+            <li><a href="classes.html">Self Defense</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-muted">
+            <li><i class="fas fa-map-marker-alt me-2 text-danger"></i> 123 Martial Arts St, Chennai</li>
+            <li><i class="fas fa-phone me-2 text-danger"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope me-2 text-danger"></i> info@dragonfist.com</li>
+          </ul>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
       </div>
 
       <!-- Copyright -->
       <p class="footer-copy">
-        © 2025 Dragon Fist Dojo. All rights reserved.
+        © 2025 Dragon Dojo. All rights reserved.
       </p>
     </div>
   </footer>

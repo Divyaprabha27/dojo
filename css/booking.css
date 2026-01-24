@@ -3,7 +3,7 @@
     background-image: url('../images/booking-bnr.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center ;
+    background-position: center;
     height: 300px;
     display: flex;
     align-items: center;
@@ -11,40 +11,116 @@
     color: #fff;
     position: relative;
 }
+
 .booking-banner::before {
     position: absolute;
     content: "";
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
 }
+
 .booking-banner h2 {
     z-index: 1;
 }
+
 /* Footer */
 footer {
     background: #f9f9f9;
-    padding: 60px 0;
-    text-align: center;
+    padding: 60px 0 30px;
+    text-align: left;
 }
-footer .list-inline a {
-    text-decoration: none;
-    font-size: 18px;
-    padding: 0 15px;
-    color: #000;
-}
-footer .active a {
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
     color: red;
 }
-.footer-social i {
-    background: #000000;
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    margin: 15px 15px 0;
-    line-height: 50px;
-    border-radius: 50%;
+
+footer ul {
+    padding: 0;
+    list-style: none;
 }
-footer p {
-    padding-top: 30px;
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+footer ul li a:hover {
+    color: red;
+    padding-left: 5px;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.footer-social i {
+    background: #000;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.footer-social i:hover {
+    background: red;
+    transform: translateY(-3px);
+}
+
+.footer-copy {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer h5 {
+        margin-top: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+        display: flex;
+    }
+
+    .col-lg-3 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Feature Box */
+.feature-box {
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
