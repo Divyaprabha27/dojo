@@ -480,6 +480,28 @@ body.dark-mode .hero-btn-secondary:hover {
     .col-5 {
         width: 100%
     }
+
+    /* Fix Navbar on Mobile */
+    .menu-navbar {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .menu-navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        max-height: 35px;
+    }
 }
 
 @media (max-width: 768px) {
