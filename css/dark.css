@@ -104,3 +104,168 @@ footer li a:hover {
   background: #00f2ff;
   color: #000;
 }
+
+/* --- HOME 2 DARK MODE --- */
+
+/* Stats */
+.dark-mode .home2-stats {
+  background: #121821;
+  color: #fff;
+}
+
+.dark-mode .home2-stats h2 {
+  color: #dc3545;
+}
+
+/* Programs */
+.dark-mode .home2-programs {
+  background: #0d0d0d;
+}
+
+.dark-mode .program-box {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark-mode .program-box i {
+  color: #dc3545;
+}
+
+/* Features (Why Choose Us) */
+.dark-mode .home2-features {
+  background: #0f0f0f !important;
+}
+
+.dark-mode .home2-features .bg-white {
+  background: #1a1a1a !important;
+  color: #fff !important;
+}
+
+.dark-mode .home2-features .text-muted {
+  color: #ccc !important;
+}
+
+/* Trainers */
+.dark-mode .home2-trainers.bg-light {
+  background: #0d0d0d !important;
+  color: #fff !important;
+}
+
+.dark-mode .home2-trainers h5 {
+  color: #fff;
+}
+
+.dark-mode .home2-trainers p:not(.text-danger) {
+  color: #bbb;
+}
+
+/* FAQ */
+.dark-mode .home2-faq {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.dark-mode .accordion-item {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark-mode .accordion-button {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background: #2a2a2a;
+  color: #dc3545;
+}
+
+.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
+
+/* Testimonials */
+.dark-mode .home2-testimonials.bg-white {
+  background: #0d0d0d !important;
+  color: #fff !important;
+}
+
+.dark-mode .home2-testimonials .border {
+  border-color: #333 !important;
+  background: #1a1a1a;
+}
+
+.dark-mode .home2-testimonials h6 {
+  color: #dc3545;
+}
+
+/* --- DASHBOARD DARK MODE --- */
+.dark-mode .sidebar {
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+.dark-mode .main-content {
+  background: #121212;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.dark-mode .stat-card {
+  background: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .stat-card h4 {
+  color: #dc3545;
+}
+
+.dark-mode .stat-card p {
+  color: #ccc;
+}
+
+.dark-mode .table {
+  border-color: #333;
+  color: #fff;
+  background-color: #1e1e1e;
+}
+
+.dark-mode .table-bordered td,
+.dark-mode .table-bordered th {
+  border-color: #333;
+  color: #fff;
+  /* Ensure text is white */
+}
+
+/* Stronger override for bg-white */
+.dark-mode .table.bg-white,
+.dark-mode .bg-white {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+}
+
+.dark-mode .table-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Ensure rows are dark */
+.dark-mode .table tbody tr {
+  color: #fff !important;
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .table td,
+.dark-mode .table th {
+  color: #fff !important;
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+
+.dark-mode h3,
+.dark-mode h5 {
+  color: #fff;
+}

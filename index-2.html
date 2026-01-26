@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Dojo | Home 2</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Existing CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+
+    <!-- NEW CSS -->
+    <!-- <link rel="stylesheet" href="css/home2.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR (same as home) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" class="img-fluid me-2" alt="logo">
+                Dragon Dojo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="menu-navbar">
+                    <!-- CENTER MENU -->
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown"
+                                role="button" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="classes.html">Classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Book Class</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="belt.html">Belt Progression</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT SIDE LOGIN / SIGNUP -->
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <!-- Theme Toggle -->
+                    <li class="nav-item ms-2">
+                        <button id="themeToggle" class="theme-btn">🌙</button>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO SPLIT -->
+    <section class="home2-hero d-flex align-items-center">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Text Side (Left) -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center hero-content-side">
+                    <div class="hero-text p-5">
+                        <span class="badge bg-danger mb-3">Since 2010</span>
+                        <h1 class="display-3 fw-bold text-uppercase">Unleash<br>Your Power</h1>
+                        <p class="lead mb-4">
+                            Master the art of discipline and strength. <br> Join the elite Dragon Fist Dojo today.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="booking.html" class="btn btn-danger btn-lg px-4">Start Free Trial</a>
+                            <a href="classes.html" class="btn btn-outline-primary btn-lg px-4 hero-btn-secondary">View
+                                Programs</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Side (Right) -->
+                <div class="col-lg-6 p-0 d-none d-lg-block hero-image-side">
+                    <!-- Image background set in CSS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="home2-stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h2>500+</h2>
+                    <p>Students Trained</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>15+</h2>
+                    <p>Expert Trainers</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>20+</h2>
+                    <p>Championships</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>12</h2>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM CARDS -->
+    <section class="home2-programs">
+        <div class="container">
+            <h3 class="text-center mb-5">Training Programs</h3>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="program-box">
+                        <i class="fas fa-child"></i>
+                        <h5>Kids Karate</h5>
+                        <p>Build focus, respect & confidence early.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="program-box">
+                        <i class="fas fa-fist-raised"></i>
+                        <h5>Teen Training</h5>
+                        <p>Strength, agility and self-discipline.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="program-box">
+                        <i class="fas fa-dumbbell"></i>
+                        <h5>Adult MMA</h5>
+                        <p>Advanced combat and fitness training.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="program-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <h5>Self Defense</h5>
+                        <p>Practical skills for real-life safety for self defence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FEATURES SECTION (Why Choose Us) -->
+    <section class="home2-features py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-md-12">
+                    <h3 class="fw-bold">Why Choose Dragon Fist?</h3>
+                    <p class="text-muted">More than just fighting—it's a way of life.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <div class="mb-3 text-danger">
+                            <i class="fas fa-user-graduate fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold">Expert Guidance</h5>
+                        <p class="text-muted">Train under certified masters with decades of experience in multiple
+                            disciplines.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <div class="mb-3 text-danger">
+                            <i class="fas fa-dumbbell fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold">Modern Facility</h5>
+                        <p class="text-muted">Train in a state-of-the-art dojo equipped with professional flooring and
+                            gear.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <div class="mb-3 text-danger">
+                            <i class="fas fa-users fa-3x"></i>
+                        </div>
+                        <h5 class="fw-bold">Supportive Community</h5>
+                        <p class="text-muted">Join a family of martial artists who support and push each other to grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTORS (Added Section 1) -->
+    <section class="home2-trainers py-5 bg-light text-dark">
+        <div class="container">
+            <h3 class="text-center mb-5">Meet Our Masters</h3>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/team-1.jpg" class="img-fluid rounded mb-3" alt="Master">
+                    <h5>Sensei Ethan</h5>
+                    <p class="text-danger">Head Instructor</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/team-2.jpg" class="img-fluid rounded mb-3" alt="Master">
+                    <h5>Master Sophia</h5>
+                    <p class="text-danger">Technical Director</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/team-3.jpg" class="img-fluid rounded mb-3" alt="Master">
+                    <h5>Coach Lucas</h5>
+                    <p class="text-danger">MMA Specialist</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/team-4.jpg" class="img-fluid rounded mb-3" alt="Master">
+                    <h5>Sensei Olivia</h5>
+                    <p class="text-danger">Youth Program</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="home2-faq py-5">
+        <div class="container">
+            <h3 class="text-center mb-5 fw-bold">Common Questions</h3>
+            <div class="accordion" id="home2Faq">
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                            What is the best age to start?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#home2Faq">
+                        <div class="accordion-body">
+                            We accept students as young as 4 years old for our Little Dragons program.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q2">
+                            Do I need to be fit?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#home2Faq">
+                        <div class="accordion-body">
+                            Not at all! Martial arts is a journey. We will help you build strength and endurance at your
+                            own pace.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Added Section 2) -->
+    <section class="home2-testimonials py-5 bg-white text-dark">
+        <div class="container">
+            <h3 class="text-center mb-5">What Our Students Say</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border rounded shadow-sm h-100">
+                        <p class="fst-italic">"Dragon Dojo changed my life. The discipline I learned here applies to
+                            everything I do."</p>
+                        <h6 class="mt-3 fw-bold">- James K.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border rounded shadow-sm h-100">
+                        <p class="fst-italic">"The best place for my kids. They are more focused and confident than
+                            ever."</p>
+                        <h6 class="mt-3 fw-bold">- Sarah L.</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border rounded shadow-sm h-100">
+                        <p class="fst-italic">"Top notch instructors who truly care about your progress. Highly
+                            recommended!"</p>
+                        <h6 class="mt-3 fw-bold">- Mike R.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Restored Full Footer) -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Column 1: About -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>About</h5>
+                    <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training
+                        since 2010.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="booking.html">Book Class</a></li>
+                        <li><a href="belt.html">Belt Progression</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Programs -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Our Programs</h5>
+                    <ul>
+                        <li><a href="classes.html">Kids Karate</a></li>
+                        <li><a href="classes.html">Teen Taekwondo</a></li>
+                        <li><a href="classes.html">Adult MMA</a></li>
+                        <li><a href="classes.html">Self Defense</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><i class="fas fa-map-marker-alt me-2 text-danger"></i> 123 Martial Arts St, Chennai</li>
+                        <li><i class="fas fa-phone me-2 text-danger"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope me-2 text-danger"></i> info@dragonfist.com</li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <p class="footer-copy">
+                © 2025 Dragon Dojo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

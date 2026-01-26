@@ -1,9 +1,11 @@
 .stat-card h4 {
-    color: red;
+  color: red;
 }
+
 .stat-card p {
-    color: #000000 !important;
+  color: #000000;
 }
+
 /* Sidebar */
 .sidebar {
   height: 100vh;
@@ -35,11 +37,11 @@
   padding: 20px;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile Fix */
-@media(max-width:768px){
+@media(max-width:768px) {
   .sidebar {
     height: auto;
   }
