@@ -1,12 +1,13 @@
 const toggleBtn = document.getElementById("themeToggle");
 
 // Load saved theme (start light by default)
-// if (localStorage.getItem("theme") === "dark") {
-//   document.body.classList.add("dark-mode");
-//   if (toggleBtn) {
-//     toggleBtn.innerHTML = "☀️";
-//   }
-// }
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  if (toggleBtn) {
+    toggleBtn.innerHTML = "☀️";
+  }
+}
 
 // Toggle theme
 if (toggleBtn) {
