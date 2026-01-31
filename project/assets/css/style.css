@@ -1,0 +1,130 @@
+:root {
+    /* Cosmic Color Palette */
+    --color-primary: #0C4A6E;
+    /* Deep Space Blue */
+    --color-secondary: #7C3AED;
+    /* Nebula Purple */
+    --color-accent: #14B8A6;
+    /* Cosmic Teal */
+    --color-accent-2: #F97316;
+    /* Stellar Orange */
+
+    /* Backgrounds */
+    --bg-light: #FFFFFF;
+    --bg-dark: #0A1929;
+    --bg-card-light: #FFFFFF;
+    --bg-card-dark: #1E293B;
+
+    /* Text */
+    --text-light-primary: #0F172A;
+    --text-light-secondary: #475569;
+    --text-dark-primary: #F1F5F9;
+    --text-dark-secondary: #CBD5E1;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cosmic Gradient Text */
+.text-gradient-cosmic {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Dark Mode Overrides */
+.dark body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark-primary);
+}
+
+.dark .text-gradient-cosmic {
+    background: linear-gradient(135deg, #38BDF8, #A78BFA, #2DD4BF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+/* Utilities */
+.container-custom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

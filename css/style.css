@@ -90,6 +90,8 @@ body {
     border-radius: 6px;
     text-align: left;
     /* Ensure content is left aligned */
+    margin-top: 8px;
+    /* Add top spacing */
 }
 
 .menu-navbar .dropdown-menu li {
@@ -114,9 +116,62 @@ body {
     color: red !important;
 }
 
+.menu-navbar .dropdown-menu .dropdown-item.active,
+.menu-navbar .dropdown-menu .dropdown-item:active {
+    background-color: #f8f9fa;
+    color: red !important;
+    font-weight: bold;
+}
+
 /* Show on Hover - Forced */
 .menu-navbar .dropdown:hover .dropdown-menu {
     display: block !important;
+}
+
+/* Right side buttons */
+.navbar-nav.ms-auto .nav-link {
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Login button - outline style */
+.navbar-nav.ms-auto .nav-link[href="login.html"] {
+    border-color: #fff;
+    color: #fff !important;
+}
+
+.navbar-nav.ms-auto .nav-link[href="login.html"]:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+/* Sign Up button - filled style */
+.navbar-nav.ms-auto .nav-link[href="signup.html"] {
+    background-color: #dc3545;
+    color: #fff !important;
+    border-color: #dc3545;
+}
+
+.navbar-nav.ms-auto .nav-link[href="signup.html"]:hover {
+    background-color: #ffffff;
+    color: #dc3545 !important;
+    border-color: #ffffff;
+}
+
+/* Dashboard button - secondary style */
+.navbar-nav.ms-auto .nav-link[href="dashboard.html"] {
+    background-color: #6c757d;
+    color: #fff !important;
+    border-color: #6c757d;
+}
+
+.navbar-nav.ms-auto .nav-link[href="dashboard.html"]:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
 }
 
 /* Ensure white text in light mode (default) */
@@ -124,8 +179,9 @@ body {
     color: #fff !important;
 }
 
-.navbar-dark .navbar-nav .nav-link.active {
-    color: #fff !important;
+.navbar-dark .navbar-nav .nav-link.active,
+.menu-navbar .nav-link.active {
+    color: red !important;
     font-weight: bold;
 }
 
@@ -162,6 +218,7 @@ a {
 .about {
     background: #F9F9F9;
     padding: 60px 0;
+    text-align: center;
 }
 
 .abt-info {
@@ -217,6 +274,7 @@ a {
 .choose {
     background: #F9F9F9;
     padding: 60px 0;
+    text-align: center;
 }
 
 .choose h6 {
@@ -342,55 +400,57 @@ footer ul li a:hover {
 .home2-nav {
     background-color: #212529 !important;
     /* Standard Bootstrap Dark */
-    position: relative;
-    z-index: 100;
-    /* Ensure it stays above the hero */
-}
 
-/* HOME 2 HERO - SPLIT LAYOUT */
-.home2-hero {
-    min-height: 85vh;
-    /* Tall hero */
-    padding: 0;
-    overflow: hidden;
-    background: #ffffff;
-    /* Light Mode Default */
-    color: #111;
-    position: relative;
-    margin-top: -80px;
-    /* Pull up behind navbar if needed, or adjust based on nav height */
-    padding-top: 80px;
-}
+    .hero-gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 50%, rgba(220, 53, 69, 0.2) 0%, transparent 50%);
+        z-index: 1;
+    }
 
-.hero-image-side {
-    background: url('../images/home-banner.jpg') center/cover no-repeat;
-    min-height: 100%;
-}
+    .home2-hero .container {
+        position: relative;
+        z-index: 2;
+    }
 
-.hero-text h1 {
-    line-height: 1;
-    margin-bottom: 20px;
-    color: #111;
-}
+    .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
-.hero-text p {
-    color: #555;
-    font-size: 1.2rem;
-}
+    .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
 
-.hero-btn-secondary {
-    border-color: #111;
-    color: #111;
-}
+    .hero-badge .badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        background: linear-gradient(45deg, #dc3545, #ff6b6b);
+        border: none;
+    }
 
-.hero-btn-secondary:hover {
-    background: #111;
-    color: #fff;
-}
+    .hero-buttons .btn {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-/* DARK MODE OVERRIDES */
-body.dark-mode .home2-hero {
-    background: #111;
+    .hero-buttons .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
     /* Dark Mode Background */
     color: #fff;
 }
@@ -472,8 +532,38 @@ body.dark-mode .hero-btn-secondary:hover {
     background-color: #f8f9fa;
 }
 
-
 /* Media Query */
+@media (max-width: 1023px) {
+    .menu-navbar,
+    .navbar-nav.ms-auto {
+        display: none !important;
+    }
+
+    .navbar-toggler {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    /* Tablet View - Fix navbar positioning */
+    .menu-navbar {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .menu-navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .navbar-brand img {
+        max-height: 35px;
+    }
+}
+
 @media (max-width: 991px) {
 
     .choose .col-7,
@@ -502,11 +592,36 @@ body.dark-mode .hero-btn-secondary:hover {
     .navbar-brand img {
         max-height: 35px;
     }
+
+    /* HOME 2 FEATURES - Full width on tablet and mobile */
+    .home2-features .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .home2-features .col-md-4:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 768px) {
     .about .col-6 {
         width: 100%;
+    }
+
+    /* Center Mission and Vision on Mobile/Tablet */
+    .abt-class .col-6 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .abt-class .col-6:last-child {
+        margin-bottom: 0;
+    }
+
+    .abt-class img {
+        margin-bottom: 15px;
     }
 
     /* Responsive Footer */

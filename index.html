@@ -28,12 +28,12 @@
                     <!-- CENTER MENU -->
                     <ul>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown"
-                                role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 18px">
+                                <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
                                 <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
                             </ul>
                         </li>
@@ -235,13 +235,18 @@
     <!-- Footer -->
     <footer class="custom-footer">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-start">
 
-                <!-- Column 1: About -->
+                <!-- Column 1: Logo -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>About</h5>
-                    <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training
-                        since 2010.</p>
+                    <div class="footer-logo">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/logo.png" class="img-fluid me-2" alt="Dragon Dojo Logo" style="max-height: 60px;">
+                            <h5 class="text-danger mb-0">Dragon Dojo</h5>
+                        </div>
+                        <p class="text-muted">Empowering students through martial arts discipline and strength training
+                            since 2010.</p>
+                    </div>
                 </div>
 
                 <!-- Column 2: Quick Links -->
@@ -286,7 +291,7 @@
 
             <!-- Copyright -->
             <p class="footer-copy">
-                © 2026 Dragon Dojo. All rights reserved.
+                2026 Dragon Dojo. All rights reserved.
             </p>
         </div>
     </footer>

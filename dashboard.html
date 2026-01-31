@@ -7,6 +7,8 @@
 
   <title>Dashboard - Dragon Fist Dojo</title>
 
+  <link rel="icon" type="image/png" href="images/logo.png">
+
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="css/dark.css">
@@ -21,13 +23,13 @@
   <!-- Top Navbar -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-      <a href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
-
-
-
-      <div>
-        <button id="themeToggle" class="theme-btn me-3">🌙</button>
-        <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" class="img-fluid me-2" alt="logo">
+        Dragon Dojo
+      </a>
+      <button id="themeToggle" class="theme-btn d-lg-none">🌙</button>
+      <div class="ms-auto d-none d-lg-block">
+        <button id="themeToggleDesktop" class="theme-btn me-3">🌙</button>
       </div>
     </div>
   </nav>
@@ -38,28 +40,32 @@
       <!-- Sidebar -->
       <div class="col-md-2 sidebar">
 
-        <a href="dashboard.html" class="active">
+        <a href="#" data-content="dashboard" class="active">
           <i class="fas fa-home me-2"></i> Dashboard
         </a>
 
-        <a href="#">
+        <a href="#" data-content="profile">
           <i class="fas fa-user me-2"></i> Profile
         </a>
 
-        <a href="#">
+        <a href="#" data-content="bookings">
           <i class="fas fa-calendar-check me-2"></i> Bookings
         </a>
 
-        <a href="#">
+        <a href="#" data-content="progress">
           <i class="fas fa-chart-line me-2"></i> Progress
         </a>
 
-        <a href="#">
+        <a href="#" data-content="students">
           <i class="fas fa-users me-2"></i> Students
         </a>
 
-        <a href="#">
+        <a href="#" data-content="settings">
           <i class="fas fa-cog me-2"></i> Settings
+        </a>
+
+        <a href="#" data-content="logout" class="logout-link">
+          <i class="fas fa-sign-out-alt me-2"></i> Logout
         </a>
 
       </div>
@@ -67,114 +73,312 @@
       <!-- Main Content -->
       <div class="col-md-10 main-content">
 
-        <h3 class="mb-4">Welcome Back, Student 👋</h3>
+        <!-- Dashboard Content -->
+        <div id="dashboard-content" class="content-section active">
+          <h3 class="mb-4">Welcome Back, Student 👋</h3>
 
-        <!-- Stats Row -->
-        <div class="row">
+          <!-- Stats Row -->
+          <div class="row">
 
-          <div class="col-md-3 mb-3">
-            <div class="stat-card text-center">
-              <h4>12</h4>
-              <p>Total Classes</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <div class="stat-card text-center">
-              <h4>5</h4>
-              <p>Upcoming Sessions</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <div class="stat-card text-center">
-              <h4>Yellow</h4>
-              <p>Current Belt</p>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <div class="stat-card text-center">
-              <h4>85%</h4>
-              <p>Attendance</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Quick Actions & Progress Row -->
-        <div class="row mt-4">
-
-          <!-- Next Belt Progress -->
-          <div class="col-md-8 mb-4">
-            <div class="stat-card">
-              <h5 class="mb-3">Next Belt Progress: <span class="text-warning">Orange Belt</span></h5>
-              <div class="progress" style="height: 25px;">
-                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar"
-                  style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-              </div>
-              <p class="mt-2 small text-muted">You are 3 classes away from your belt test eligibility!</p>
-            </div>
-          </div>
-
-          <!-- Quick Actions -->
-          <div class="col-md-4 mb-4">
-            <div class="stat-card">
-              <h5 class="mb-3">Quick Actions</h5>
-              <div class="d-grid gap-2">
-                <a href="booking.html" class="btn btn-outline-primary"><i class="fas fa-calendar-plus me-2"></i>Book
-                  Class</a>
-                <button class="btn btn-outline-success"><i class="fas fa-credit-card me-2"></i>Pay Fees</button>
-                <a href="contact.html" class="btn btn-outline-danger"><i class="fas fa-envelope me-2"></i>Contact
-                  Sensei</a>
+            <div class="col-md-3 mb-3">
+              <div class="stat-card text-center">
+                <h4>12</h4>
+                <p>Total Classes</p>
               </div>
             </div>
+
+            <div class="col-md-3 mb-3">
+              <div class="stat-card text-center">
+                <h4>5</h4>
+                <p>Upcoming Sessions</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <div class="stat-card text-center">
+                <h4>Yellow</h4>
+                <p>Current Belt</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <div class="stat-card text-center">
+                <h4>85%</h4>
+                <p>Attendance</p>
+              </div>
+            </div>
+
           </div>
 
+          <!-- Quick Actions & Progress Row -->
+          <div class="row mt-4">
+
+            <!-- Next Belt Progress -->
+            <div class="col-md-8 mb-4">
+              <div class="stat-card">
+                <h5 class="mb-3">Next Belt Progress: <span class="text-warning">Orange Belt</span></h5>
+                <div class="progress" style="height: 25px;">
+                  <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar"
+                    style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+                <p class="mt-2 small text-muted">You are 3 classes away from your belt test eligibility!</p>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="col-md-4 mb-4">
+              <div class="stat-card">
+                <h5 class="mb-3">Quick Actions</h5>
+                <div class="d-grid gap-2">
+                  <a href="booking.html" class="btn btn-outline-primary"><i class="fas fa-calendar-plus me-2"></i>Book
+                    Class</a>
+                  <button class="btn btn-outline-success"><i class="fas fa-credit-card me-2"></i>Pay Fees</button>
+                  <a href="contact.html" class="btn btn-outline-danger"><i class="fas fa-envelope me-2"></i>Contact
+                    Sensei</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="stat-card mt-4">
+
+            <h5 class="mb-3">Recent Activity</h5>
+
+            <div class="table-responsive">
+              <table class="table table-bordered mb-0">
+
+                <thead class="table-dark">
+                  <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>20 Jan 2026</td>
+                    <td>Karate Training</td>
+                    <td>Completed</td>
+                  </tr>
+
+                  <tr>
+                    <td>22 Jan 2026</td>
+                    <td>Self Defense Class</td>
+                    <td>Upcoming</td>
+                  </tr>
+
+                  <tr>
+                    <td>25 Jan 2026</td>
+                    <td>Belt Test</td>
+                    <td>Scheduled</td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+
+            </div>
+
+          </div>
         </div>
 
-        <!-- Recent Activity -->
-        <div class="stat-card mt-4">
-
-          <h5 class="mb-3">Recent Activity</h5>
-
-          <div class="table-responsive">
-            <table class="table table-bordered mb-0">
-
-              <thead class="table-dark">
-                <tr>
-                  <th>Date</th>
-                  <th>Activity</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>20 Jan 2026</td>
-                  <td>Karate Training</td>
-                  <td>Completed</td>
-                </tr>
-
-                <tr>
-                  <td>22 Jan 2026</td>
-                  <td>Self Defense Class</td>
-                  <td>Upcoming</td>
-                </tr>
-
-                <tr>
-                  <td>25 Jan 2026</td>
-                  <td>Belt Test</td>
-                  <td>Scheduled</td>
-                </tr>
-
-              </tbody>
-
-            </table>
-
-
+        <!-- Profile Content -->
+        <div id="profile-content" class="content-section">
+          <h3 class="mb-4">My Profile 👤</h3>
+          <div class="stat-card">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <img src="images/team-1.jpg" class="rounded-circle mb-3" alt="Profile" style="width: 150px; height: 150px; object-fit: cover;">
+                <h5>John Doe</h5>
+                <p class="text-muted">Yellow Belt</p>
+              </div>
+              <div class="col-md-8">
+                <h5 class="mb-3">Personal Information</h5>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" value="John Doe" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" value="john.doe@email.com" readonly>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" value="+91 98765 43210" readonly>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Join Date</label>
+                    <input type="text" class="form-control" value="15 Jan 2024" readonly>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Edit Profile</button>
+              </div>
+            </div>
           </div>
+        </div>
 
+        <!-- Bookings Content -->
+        <div id="bookings-content" class="content-section">
+          <h3 class="mb-4">My Bookings 📅</h3>
+          <div class="stat-card">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Date</th>
+                    <th>Class</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>22 Jan 2026</td>
+                    <td>Karate Training</td>
+                    <td>5:00 PM</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td><button class="btn btn-sm btn-warning">Reschedule</button></td>
+                  </tr>
+                  <tr>
+                    <td>24 Jan 2026</td>
+                    <td>Self Defense</td>
+                    <td>6:00 PM</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td><button class="btn btn-sm btn-info">Confirm</button></td>
+                  </tr>
+                  <tr>
+                    <td>26 Jan 2026</td>
+                    <td>Sparring Session</td>
+                    <td>4:00 PM</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td><button class="btn btn-sm btn-danger">Cancel</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Content -->
+        <div id="progress-content" class="content-section">
+          <h3 class="mb-4">My Progress 📈</h3>
+          <div class="stat-card">
+            <h5 class="mb-3">Belt Progression</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label">White Belt</label>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Yellow Belt</label>
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label">Orange Belt</label>
+                  <div class="progress">
+                    <div class="progress-bar bg-secondary" style="width: 0%">0%</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Green Belt</label>
+                  <div class="progress">
+                    <div class="progress-bar bg-secondary" style="width: 0%">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat-card mt-3">
+            <h5 class="mb-3">Skills Assessment</h5>
+            <div class="row">
+              <div class="col-md-3 text-center">
+                <h4>85%</h4>
+                <p>Kata Forms</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <h4>78%</h4>
+                <p>Sparring</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <h4>92%</h4>
+                <p>Discipline</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <h4>70%</h4>
+                <p>Strength</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Students Content -->
+        <div id="students-content" class="content-section">
+          <h3 class="mb-4">Fellow Students 👥</h3>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="stat-card text-center">
+                <img src="images/team-2.jpg" class="rounded-circle mb-2" alt="Student" style="width: 80px; height: 80px; object-fit: cover;">
+                <h6>Sarah Johnson</h6>
+                <p class="text-muted">Orange Belt</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="stat-card text-center">
+                <img src="images/team-3.jpg" class="rounded-circle mb-2" alt="Student" style="width: 80px; height: 80px; object-fit: cover;">
+                <h6>Mike Chen</h6>
+                <p class="text-muted">Green Belt</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="stat-card text-center">
+                <img src="images/team-4.jpg" class="rounded-circle mb-2" alt="Student" style="width: 80px; height: 80px; object-fit: cover;">
+                <h6>Emily Davis</h6>
+                <p class="text-muted">Yellow Belt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Content -->
+        <div id="settings-content" class="content-section">
+          <h3 class="mb-4">Settings ⚙️</h3>
+          <div class="stat-card">
+            <h5 class="mb-3">Account Settings</h5>
+            <div class="mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="smsNotifications">
+                <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="darkMode">
+                <label class="form-check-label" for="darkMode">Dark Mode</label>
+              </div>
+            </div>
+            <button class="btn btn-primary">Save Settings</button>
+          </div>
         </div>
 
       </div>

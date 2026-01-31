@@ -36,13 +36,13 @@
                     <!-- CENTER MENU -->
                     <ul>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown"
-                                role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 18px">
                                 <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+                                <li><a class="dropdown-item active" href="index-2.html">Home 2</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -83,28 +83,71 @@
         </div>
     </nav>
 
-    <!-- HERO SPLIT -->
-    <section class="home2-hero d-flex align-items-center">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
+    <!-- HERO GRADIENT -->
+    <section class="home2-hero d-flex align-items-center position-relative overflow-hidden">
+        <div class="hero-gradient-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
                 <!-- Text Side (Left) -->
-                <div class="col-lg-6 d-flex align-items-center justify-content-center hero-content-side">
-                    <div class="hero-text p-5">
-                        <span class="badge bg-danger mb-3">Since 2010</span>
-                        <h1 class="display-3 fw-bold text-uppercase">Unleash<br>Your Power</h1>
-                        <p class="lead mb-4">
-                            Master the art of discipline and strength. <br> Join the elite Dragon Fist Dojo today.
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <span class="badge bg-danger mb-3">🔥 Since 2010</span>
+                        </div>
+                        <h1 class="display-2 fw-bold mb-4">
+                            <span class="text-danger">Master</span> The Art <br>
+                            Of <span class="text-uppercase">Warriors</span>
+                        </h1>
+                        <p class="lead mb-4 text-muted">
+                            Transform your body, sharpen your mind, and embrace the warrior spirit. <br>
+                            Join thousands who've found their strength at Dragon Dojo.
                         </p>
-                        <div class="d-flex gap-3">
-                            <a href="booking.html" class="btn btn-danger btn-lg px-4">Start Free Trial</a>
-                            <a href="classes.html" class="btn btn-outline-primary btn-lg px-4 hero-btn-secondary">View
-                                Programs</a>
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="booking.html" class="btn btn-danger btn-lg px-4 py-3 rounded-pill">
+                                <i class="fas fa-fire me-2"></i>Start Your Journey
+                            </a>
+                            <a href="classes.html" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+                                <i class="fas fa-play-circle me-2"></i>Watch Demo
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-5">
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="stat-item">
+                                        <h3 class="text-danger fw-bold">500+</h3>
+                                        <p class="mb-0">Students</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-item">
+                                        <h3 class="text-danger fw-bold">15+</h3>
+                                        <p class="mb-0">Years</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Image Side (Right) -->
-                <div class="col-lg-6 p-0 d-none d-lg-block hero-image-side">
-                    <!-- Image background set in CSS -->
+                <div class="col-lg-6">
+                    <div class="hero-image-container position-relative">
+                        <div class="hero-image-wrapper">
+                            <img src="images/home-banner.jpg" class="img-fluid hero-main-image" alt="Martial Arts Training">
+                            <div class="hero-image-overlay"></div>
+                        </div>
+                        <div class="floating-card floating-card-1">
+                            <div class="card-body text-center p-3">
+                                <i class="fas fa-medal text-danger fa-2x mb-2"></i>
+                                <h6 class="fw-bold">Expert Trainers</h6>
+                            </div>
+                        </div>
+                        <div class="floating-card floating-card-2">
+                            <div class="card-body text-center p-3">
+                                <i class="fas fa-award text-danger fa-2x mb-2"></i>
+                                <h6 class="fw-bold">Certified</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -316,11 +359,16 @@
         <div class="container">
             <div class="row">
 
-                <!-- Column 1: About -->
+                <!-- Column 1: Logo -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>About</h5>
-                    <p class="text-muted mt-2">Empowering students through martial arts discipline and strength training
-                        since 2010.</p>
+                    <div class="footer-logo">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/logo.png" class="img-fluid me-2" alt="Dragon Dojo Logo" style="max-height: 60px;">
+                            <h5 class="text-danger mb-0">Dragon Dojo</h5>
+                        </div>
+                        <p class="text-muted">Empowering students through martial arts discipline and strength training
+                            since 2010.</p>
+                    </div>
                 </div>
 
                 <!-- Column 2: Quick Links -->
