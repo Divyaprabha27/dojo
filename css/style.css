@@ -139,7 +139,8 @@ body {
 }
 
 /* Login button - outline style */
-.navbar-nav.ms-auto .nav-link[href="login.html"] {
+.navbar-nav.ms-auto .nav-link[onclick*="login.html"],
+.navbar-nav.ms-auto button[onclick*="login.html"] {
     border: 2px solid #fff;
     color: #fff !important;
     padding: 8px 16px !important;
@@ -148,14 +149,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar-nav.ms-auto .nav-link[href="login.html"]:hover {
+.navbar-nav.ms-auto .nav-link[onclick*="login.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="login.html"]:hover {
     background-color: #fff;
     color: #000 !important;
     transform: translateY(-2px);
 }
 
 /* Sign Up button - filled style */
-.navbar-nav.ms-auto .nav-link[href="signup.html"] {
+.navbar-nav.ms-auto .nav-link[onclick*="signup.html"],
+.navbar-nav.ms-auto button[onclick*="signup.html"] {
     background-color: #dc3545;
     color: #fff !important;
     border: 2px solid #dc3545;
@@ -165,14 +168,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar-nav.ms-auto .nav-link[href="signup.html"]:hover {
+.navbar-nav.ms-auto .nav-link[onclick*="signup.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="signup.html"]:hover {
     background-color: #ffffff;
     color: #dc3545 !important;
     transform: translateY(-2px);
 }
 
 /* Dashboard button - secondary style */
-.navbar-nav.ms-auto .nav-link[href="dashboard.html"] {
+.navbar-nav.ms-auto .nav-link[onclick*="dashboard.html"],
+.navbar-nav.ms-auto button[onclick*="dashboard.html"] {
     background-color: #6c757d;
     color: #fff !important;
     border: 2px solid #6c757d;
@@ -182,7 +187,8 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar-nav.ms-auto .nav-link[href="dashboard.html"]:hover {
+.navbar-nav.ms-auto .nav-link[onclick*="dashboard.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="dashboard.html"]:hover {
     background-color: #5a6268;
     border-color: #5a6268;
     transform: translateY(-2px);
