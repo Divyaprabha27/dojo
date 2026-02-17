@@ -132,6 +132,40 @@ footer li a:hover {
   color: #dc3545;
 }
 
+/* Hero Section - Dark Mode */
+.dark-mode .home2-hero {
+  background: #0d0d0d;
+}
+
+.dark-mode .home2-hero .hero-text {
+  color: #fff !important;
+}
+
+.dark-mode .home2-hero .hero-text h1 {
+  color: #fff !important;
+}
+
+.dark-mode .home2-hero .hero-text p {
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+.dark-mode .home2-hero .hero-text p.text-muted {
+  color: #ccc !important;
+}
+
+.dark-mode .home2-hero .hero-badge .badge {
+  color: #fff !important;
+}
+
+.dark-mode .home2-hero .hero-stats .stat-item h3 {
+  color: #dc3545 !important;
+}
+
+.dark-mode .home2-hero .hero-stats .stat-item p {
+  color: #fff !important;
+}
+
 /* Features (Why Choose Us) */
 .dark-mode .home2-features {
   background: #0f0f0f !important;
@@ -268,4 +302,164 @@ footer li a:hover {
 .dark-mode h3,
 .dark-mode h5 {
   color: #fff;
+}
+
+/* --- LOGIN & SIGNUP PAGES DARK MODE --- */
+
+/* Login Page */
+.dark-mode .login-page {
+  background: #0d0d0d;
+}
+
+.dark-mode .login-box {
+  background: #1a1a1a !important;
+  color: #fff !important;
+  border: 1px solid #333;
+}
+
+.dark-mode .login-box h3 {
+  color: #fff !important;
+}
+
+.dark-mode .login-box .form-control {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #fff !important;
+}
+
+.dark-mode .login-box .form-control::placeholder {
+  color: #aaa !important;
+}
+
+.dark-mode .login-box .form-control:focus {
+  background: #333 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dark-mode .login-box .form-check-label {
+  color: #fff !important;
+}
+
+.dark-mode .login-box .forgot-link {
+  color: #dc3545 !important;
+}
+
+.dark-mode .login-box .forgot-link:hover {
+  color: #ff6b6b !important;
+}
+
+.dark-mode .login-box .social-icons a {
+  background: #2a2a2a !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .login-box .social-icons a:hover {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dark-mode .login-box .action {
+  color: #ccc !important;
+}
+
+.dark-mode .login-box .action a {
+  color: #dc3545 !important;
+}
+
+.dark-mode .login-box .action a:hover {
+  color: #ff6b6b !important;
+}
+
+/* Signup Page */
+.dark-mode .signup-page {
+  background: #0d0d0d;
+}
+
+.dark-mode .signup-box {
+  background: #1a1a1a !important;
+  color: #fff !important;
+  border: 1px solid #333;
+}
+
+.dark-mode .signup-box h3 {
+  color: #fff !important;
+}
+
+.dark-mode .signup-box .form-control {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #fff !important;
+}
+
+.dark-mode .signup-box .form-control::placeholder {
+  color: #aaa !important;
+}
+
+.dark-mode .signup-box .form-control:focus {
+  background: #333 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dark-mode .signup-box .form-check-label {
+  color: #fff !important;
+}
+
+.dark-mode .signup-box .form-check-label a {
+  color: #dc3545 !important;
+}
+
+.dark-mode .signup-box .form-check-label a:hover {
+  color: #ff6b6b !important;
+}
+
+.dark-mode .signup-box .social-icons a {
+  background: #2a2a2a !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .signup-box .social-icons a:hover {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dark-mode .signup-box .action {
+  color: #ccc !important;
+}
+
+.dark-mode .signup-box .action a {
+  color: #dc3545 !important;
+}
+
+.dark-mode .signup-box .action a:hover {
+  color: #ff6b6b !important;
+}
+
+/* Common form elements for both pages */
+.dark-mode .form-control {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #fff !important;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #aaa !important;
+}
+
+.dark-mode .form-control:focus {
+  background: #333 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.theme-btn {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
 }
