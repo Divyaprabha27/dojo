@@ -90,8 +90,8 @@ body {
     border-radius: 6px;
     text-align: left;
     /* Ensure content is left aligned */
-    margin-top: 8px;
-    /* Add top spacing */
+    margin-top: 0;
+    /* Remove gap to prevent disappearing */
 }
 
 .menu-navbar .dropdown-menu li {
@@ -247,12 +247,15 @@ a {
 
 .about h6 {
     color: red;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .about h3 {
     font-weight: bold;
     font-size: 40px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .abt-class {
@@ -428,7 +431,7 @@ footer ul li a:hover {
         right: 0;
         bottom: 0;
         background: radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 50%, rgba(220, 53, 69, 0.2) 0%, transparent 50%);
+            radial-gradient(circle at 80% 50%, rgba(220, 53, 69, 0.2) 0%, transparent 50%);
         z-index: 1;
     }
 
@@ -471,6 +474,7 @@ footer ul li a:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
+
     /* Dark Mode Background */
     color: #fff;
 }
@@ -553,18 +557,10 @@ body.dark-mode .hero-btn-secondary:hover {
 }
 
 /* Media Query */
-@media (max-width: 1023px) {
-    .menu-navbar,
-    .navbar-nav.ms-auto {
-        display: none !important;
-    }
 
-    .navbar-toggler {
-        display: block !important;
-    }
-}
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
+
     /* Tablet View - Fix navbar positioning */
     .menu-navbar {
         position: static;
@@ -572,15 +568,211 @@ body.dark-mode .hero-btn-secondary:hover {
         width: 100%;
         margin-top: 10px;
     }
-    
+
     .menu-navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column !important;
+        /* Stack vertically */
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px !important;
     }
-    
+
     .navbar-brand img {
         max-height: 35px;
+    }
+
+    /* Fix menu overlay */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100vh;
+        background-color: #212529;
+        /* Match navbar-dark bg-dark */
+        z-index: 9999;
+        padding: 1rem;
+        /* Flexbox for perfect centering of ALL content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* --- ROBUST JS-DRIVEN ANIMATION LOGIC --- */
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        /* Flex Alignment */
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #212529;
+    }
+
+    /* Force display when opening, open, or closing */
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: flex !important;
+        height: 100vh !important;
+        transition: none !important;
+        /* Kill Bootstrap transitions */
+    }
+
+    /* OPENING: trigger based on body class added by JS */
+    body.mobile-menu-open .navbar-collapse.collapsing {
+        animation: mobileMenuSlideIn 0.3s ease-out forwards;
+    }
+
+    /* CLOSING: trigger based on body class added by JS */
+    body.mobile-menu-closing .navbar-collapse.collapsing {
+        animation: mobileMenuSlideOut 0.3s ease-in forwards;
+    }
+
+    /* FULLY OPEN State */
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Ensure opacity starts at 0 for collapsing to allow animation to take over */
+    .navbar-collapse.collapsing {
+        opacity: 1;
+        transform: translateY(0);
+        /* Default, animation will override */
+    }
+
+    /* KEYFRAMES */
+    @keyframes mobileMenuSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes mobileMenuSlideOut {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Hamburger logic */
+    .navbar-toggler[aria-expanded="true"] {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+    }
+
+    .navbar-toggler {
+        z-index: 10001;
+        /* Above overlay */
+    }
+
+    /* Ensure Close Button is Always on Top and Clickable */
+    .navbar-collapse .btn-close {
+        z-index: 10000 !important;
+        /* Higher than collapse container */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+        /* Ensure visibility */
+    }
+
+    /* Center the Right Actions (Sign Up, Dashboard, Toggle) */
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+        gap: 15px;
+        /* Add spacing between buttons */
+        margin-top: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        width: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 !important;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav button {
+        margin: 5px 0 !important;
+        /* Stack vertically with spacing */
+        display: inline-block;
+    }
+
+    /* Ensure vertical stacking and centering happens INSIDE the collapse */
+    .menu-navbar {
+        min-height: auto;
+        /* Remove 100% height to prevent pushing buttons down */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        /* Adjust spacing between menu and buttons */
+    }
+
+    .menu-navbar .nav-link {
+        font-size: 1.25rem !important;
+        /* Larger text for mobile */
+        padding: 10px 0 !important;
+    }
+
+    /* Hide hamburger when menu is OPEN (not collapsed) */
+    .navbar-toggler[aria-expanded="true"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Ensure Close Button is Always on Top and Clickable */
+    .navbar-collapse .btn-close {
+        z-index: 10000 !important;
+        /* Higher than collapse container */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+        /* Ensure visibility */
+    }
+}
+
+/* Fix Overlap on Small Desktops */
+@media (min-width: 1200px) and (max-width: 1350px) {
+    .menu-navbar ul {
+        gap: 2px !important;
+    }
+
+    .navbar-collapse li {
+        padding: 0 1px !important;
+    }
+
+    .menu-navbar .nav-link {
+        font-size: 13px !important;
+        padding: 8px 4px !important;
     }
 }
 
@@ -618,7 +810,7 @@ body.dark-mode .hero-btn-secondary:hover {
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .home2-features .col-md-4:last-child {
         margin-bottom: 0;
     }
@@ -660,6 +852,18 @@ body.dark-mode .hero-btn-secondary:hover {
 
     .col-lg-3 {
         margin-bottom: 30px;
+    }
+
+    /* Responsive About Section Headings */
+    .about h6 {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .about h3 {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        font-size: 32px;
     }
 }
 

@@ -7,6 +7,14 @@
   border-radius: 10px;
 }
 
+/* Center logo and website name in login/signup forms */
+.login-box .navbar-brand,
+.signup-box .navbar-brand {
+  justify-content: center;
+  margin: 0 auto;
+  display: inline-flex;
+}
+
 .login-box h3 {
   color: red;
   padding-bottom: 10px;

@@ -15,29 +15,29 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html" style="padding-top: 0;">
-                <img src="images/logo.png" class="img-fluid me-2" alt="logo" style="max-height: 40px;">
+            <a class="navbar-brand d-flex align-items-center text-danger" style="font-weight: bold;font-size: 1.25rem;"
+                href="index.html">
+                <img src="images/logo.png" class="img-fluid me-2" alt="logo">
                 Dragon Dojo
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Close Button for Mobile -->
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 d-xl-none"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Close"></button>
 
                 <div class="menu-navbar">
                     <!-- CENTER MENU -->
                     <ul>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 18px">
-                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-2.html">Home 2</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="classes.html">Classes</a>
@@ -56,9 +56,7 @@
 
                 <!-- RIGHT SIDE LOGIN / SIGNUP -->
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <button class="nav-link" onclick="window.location.href='login.html'">Login</button>
-                    </li>
+
                     <li class="nav-item">
                         <button class="nav-link" onclick="window.location.href='signup.html'">Sign Up</button>
                     </li>
@@ -165,7 +163,8 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 border rounded text-center h-100 d-flex flex-column">
                     <div class="mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="fst-italic flex-grow-1">"The instructors here are amazing. My son has gained so much confidence since
+                    <p class="fst-italic flex-grow-1">"The instructors here are amazing. My son has gained so much
+                        confidence since
                         joining the Kids Karate program."</p>
                     <h6 class="mt-3 fw-bold mb-0">- Sarah J.</h6>
                 </div>
@@ -173,7 +172,8 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 border rounded text-center h-100 d-flex flex-column">
                     <div class="mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="fst-italic flex-grow-1">"I've tried many gyms, but Dragon Fist Dojo is different. The community is
+                    <p class="fst-italic flex-grow-1">"I've tried many gyms, but Dragon Fist Dojo is different. The
+                        community is
                         supportive and the training is top-notch."</p>
                     <h6 class="mt-3 fw-bold mb-0">- Mike T.</h6>
                 </div>
@@ -181,7 +181,8 @@
             <div class="col-md-4">
                 <div class="testimonial-card p-4 border rounded text-center h-100 d-flex flex-column">
                     <div class="mb-3">⭐⭐⭐⭐⭐</div>
-                    <p class="fst-italic flex-grow-1">"The Self Defense class gave me practical skills and peace of mind. Highly
+                    <p class="fst-italic flex-grow-1">"The Self Defense class gave me practical skills and peace of
+                        mind. Highly
                         recommend to everyone!"</p>
                     <h6 class="mt-3 fw-bold mb-0">- Emily R.</h6>
                 </div>
@@ -197,7 +198,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-logo">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="images/logo.png" class="img-fluid me-2" alt="Dragon Dojo Logo" style="max-height: 60px;">
+                            <img src="images/logo.png" class="img-fluid me-2" alt="Dragon Dojo Logo"
+                                style="max-height: 60px;">
                             <h5 class="text-danger mb-0">Dragon Dojo</h5>
                         </div>
                         <p class="text-muted">Empowering students through martial arts discipline and strength training

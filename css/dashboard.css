@@ -7,11 +7,20 @@
 }
 
 /* Sidebar */
+/* Sidebar Desktop Default */
 .sidebar {
   height: 100vh;
   background: #212529;
   color: #fff;
   padding-top: 20px;
+  /* Desktop: Stick to left, fixed width */
+  position: fixed;
+  top: 56px;
+  /* Below navbar */
+  left: 0;
+  width: 280px;
+  overflow-y: auto;
+  z-index: 100;
 }
 
 .sidebar a {
@@ -35,6 +44,114 @@
 
 .sidebar a.logout-link:hover {
   background: #c82333;
+}
+
+/* Main Content Alignment for Desktop */
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 280px;
+    /* Match sidebar width */
+    padding: 20px;
+    width: calc(100% - 280px);
+    /* Explicitly subtract width to prevent overflow */
+    /* Restore standard block behavior if it was a flex item */
+    flex: 0 0 auto;
+  }
+}
+
+/* Fix for Grid Row Overflow */
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Mobile/ Tablet Sidebar */
+@media (max-width: 991px) {
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+    z-index: 1050;
+    background: #212529;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 0;
+    overflow-y: auto;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile {
+    background: #212529;
+    color: #fff;
+    padding: 20px 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .sidebar-mobile a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+  }
+
+  .sidebar-mobile a:hover,
+  .sidebar-mobile a.active {
+    background: #dc3545;
+    color: #fff;
+  }
+
+  .sidebar-mobile a.logout-link {
+    background: #dc3545;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .sidebar-mobile a.logout-link:hover {
+    background: #c82333;
+  }
+
+  .sidebar .collapse.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  /* Add backdrop overlay */
+  .sidebar-backdrop {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
 }
 
 /* Main Content */
@@ -62,62 +179,188 @@
 /* Mobile Fix */
 @media(max-width:768px) {
   .sidebar {
-    height: auto;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 20px;
+    height: 100vh;
+    z-index: 1050;
+    background: #212529;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 0;
   }
-  
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile {
+    background: #212529;
+    color: #fff;
+    padding: 20px 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .sidebar-mobile a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+  }
+
+  .sidebar-mobile a:hover,
+  .sidebar-mobile a.active {
+    background: #dc3545;
+    color: #fff;
+  }
+
+  .sidebar-mobile a.logout-link {
+    background: #dc3545;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .sidebar-mobile a.logout-link:hover {
+    background: #c82333;
+  }
+
+  .sidebar .collapse.show {
+    transform: translateX(0);
+  }
+
   .main-content {
     padding: 15px;
+    margin-left: 0;
   }
-  
+
   .navbar .container-fluid {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
   }
-  
+
   .navbar-brand {
     flex-shrink: 0;
     margin-right: auto;
   }
-  
+
   .navbar-brand img {
     max-height: 35px;
   }
-  
+
   .theme-btn.d-lg-none {
     margin-left: 10px;
     padding: 8px 12px;
     font-size: 16px;
+  }
+
+  /* Add backdrop overlay */
+  .sidebar-backdrop {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
   }
 }
 
 /* Tablet View (1024x768 and similar) */
 @media(max-width:1024px) and (min-width:769px) {
   .sidebar {
-    width: 250px;
-    flex-shrink: 0;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 280px;
+    height: calc(100vh - 56px);
+    z-index: 1050;
+    background: #212529;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 0;
   }
-  
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile {
+    background: #212529;
+    color: #fff;
+    padding: 20px 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .sidebar-mobile a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+  }
+
+  .sidebar-mobile a:hover,
+  .sidebar-mobile a.active {
+    background: #dc3545;
+    color: #fff;
+  }
+
+  .sidebar-mobile a.logout-link {
+    background: #dc3545;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .sidebar-mobile a.logout-link:hover {
+    background: #c82333;
+  }
+
+  .sidebar .collapse.show {
+    transform: translateX(0);
+  }
+
   .main-content {
     padding: 15px;
+    margin-left: 0;
   }
-  
+
   .navbar .container-fluid {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .navbar-brand img {
     max-height: 40px;
   }
-  
+
   .theme-btn.d-lg-none {
     display: none;
+  }
+
+  /* Add backdrop overlay */
+  .sidebar-backdrop {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+  }
+
+  .sidebar-backdrop.show {
+    display: block;
   }
 }
 
@@ -125,30 +368,31 @@
 @media(max-width:480px) {
   .sidebar a {
     padding: 8px 12px;
+    font-size: 16px;
     font-size: 13px;
   }
-  
+
   .sidebar a i {
     width: 20px;
     text-align: center;
   }
-  
+
   .stat-card h4 {
     font-size: 18px;
   }
-  
+
   .stat-card p {
     font-size: 14px;
   }
-  
+
   .main-content h3 {
     font-size: 20px;
   }
-  
+
   .navbar-brand img {
     max-height: 30px;
   }
-  
+
   .theme-btn.d-lg-none {
     padding: 6px 10px;
     font-size: 14px;
