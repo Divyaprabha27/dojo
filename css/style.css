@@ -1,3 +1,886 @@
+body {
+    background: #ffffff;
+    color: #111;
+    transition: 0.3s ease;
+}
+
+/* header */
+.navbar .container {
+    position: relative;
+    z-index: 1000;
+    /* Ensure navbar content stays on top globally */
+    /* For absolute centering */
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    /* Ensure navbar background stays on top globally */
+}
+
+.navbar-collapse li {
+    padding: 0 6px;
+    text-align: center;
+    color: #ffffff;
+    list-style: none;
+}
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar ul,
+.navbar li {
+    list-style: none !important;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* New Menu Wrapper Style */
+.menu-navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    /* Ensure container is above Hero */
+}
+
+.menu-navbar ul {
+    display: flex;
+    flex-direction: row;
+    /* Make one line */
+    align-items: center;
+    gap: 15px;
+    /* Spacing between items */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navbar li {
+    list-style: none;
+    position: relative;
+    /* Ensure absolute dropdown positions correctly */
+}
+
+/* Fix Dropdown Visibility */
+/* Fix Dropdown Visibility */
+/* Fix Dropdown Visibility */
+/* Fix Dropdown Visibility */
+.menu-navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Align left */
+    min-width: 140px;
+    /* Minimal width */
+    z-index: 99999 !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    list-style: none !important;
+    border-radius: 6px;
+    text-align: left;
+    /* Ensure content is left aligned */
+    margin-top: 0;
+    /* Remove gap to prevent disappearing */
+}
+
+.menu-navbar .dropdown-menu li {
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* Ensure li is left aligned */
+}
+
+.menu-navbar .dropdown-menu .dropdown-item {
+    color: #111 !important;
+    padding: 8px 15px;
+    /* Compact padding */
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    /* Ensure text is left aligned */
+}
+
+.menu-navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: red !important;
+}
+
+.menu-navbar .dropdown-menu .dropdown-item.active,
+.menu-navbar .dropdown-menu .dropdown-item:active {
+    background-color: #f8f9fa;
+    color: red !important;
+    font-weight: bold;
+}
+
+/* Show on Hover - Forced */
+.menu-navbar .dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+/* Right side buttons */
+.navbar-nav.ms-auto .nav-link {
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Login button - outline style */
+.navbar-nav.ms-auto .nav-link[onclick*="login.html"],
+.navbar-nav.ms-auto button[onclick*="login.html"] {
+    border: 2px solid #fff;
+    color: #fff !important;
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav.ms-auto .nav-link[onclick*="login.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="login.html"]:hover {
+    background-color: #fff;
+    color: #000 !important;
+    transform: translateY(-2px);
+}
+
+/* Sign Up button - filled style */
+.navbar-nav.ms-auto .nav-link[onclick*="signup.html"],
+.navbar-nav.ms-auto button[onclick*="signup.html"] {
+    background-color: #dc3545;
+    color: #fff !important;
+    border: 2px solid #dc3545;
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav.ms-auto .nav-link[onclick*="signup.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="signup.html"]:hover {
+    background-color: #ffffff;
+    color: #dc3545 !important;
+    transform: translateY(-2px);
+}
+
+/* Dashboard button - secondary style */
+.navbar-nav.ms-auto .nav-link[onclick*="dashboard.html"],
+.navbar-nav.ms-auto button[onclick*="dashboard.html"] {
+    background-color: #6c757d;
+    color: #fff !important;
+    border: 2px solid #6c757d;
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav.ms-auto .nav-link[onclick*="dashboard.html"]:hover,
+.navbar-nav.ms-auto button[onclick*="dashboard.html"]:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Ensure white text in light mode (default) */
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.menu-navbar .nav-link.active {
+    color: red !important;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: red !important;
+}
+
+.navbar-collapse li {
+    padding: 0 5px;
+    text-align: center;
+}
+
+.hero {
+    background: url('../images/home-banner.jpg') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
+}
+
+.hero::after {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1,
+a {
+    z-index: 1;
+    position: relative;
+}
+
+/* About */
+.about {
+    background: #F9F9F9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.abt-info {
+    border-radius: 30px;
+}
+
+.about h6 {
+    color: red;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.about h3 {
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.abt-class {
+    background: #fff;
+    margin-top: 50px;
+    padding: 35px;
+}
+
+.abt-class h5 {
+    padding: 20px 0 15px;
+    color: red;
+}
+
+/* Our Program */
+.program {
+    padding: 60px 0;
+}
+
+.card-body {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ;
+    border: none;
+}
+
+.card-class {
+    text-align: center;
+}
+
+.card-title {
+    padding-top: 25px;
+    color: red;
+}
+
+.card-text {
+    padding: 20px 15px;
+}
+
+/* Why Choose Us */
+.choose {
+    background: #F9F9F9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.choose h6 {
+    color: red;
+}
+
+.choose h3 {
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.choose .focus {
+    padding-top: 30px;
+}
+
+.choose .focus img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.choose .choose1 img {
+    border-radius: 30px;
+}
+
+/* Trainers */
+.trainers {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.trainers h6 {
+    color: red;
+}
+
+.trainers h3 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 25px 0;
+}
+
+.trainers img {
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.trainers h5 {
+    font-weight: bold;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background: #f9f9f9;
+    padding: 60px 0 30px;
+    text-align: left;
+    /* Left align for columns */
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: red;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+footer ul li a:hover {
+    color: red;
+    padding-left: 5px;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.footer-social i {
+    background: #000;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.footer-social i:hover {
+    background: red;
+    transform: translateY(-3px);
+}
+
+.footer-copy {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* HOME 2 STYLES */
+
+/* Custom Navbar for Home 2 */
+/* Custom Navbar for Home 2 (Matches other pages) */
+.home2-nav {
+    background-color: #212529 !important;
+    /* Standard Bootstrap Dark */
+
+    .hero-gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(220, 53, 69, 0.2) 0%, transparent 50%);
+        z-index: 1;
+    }
+
+    .home2-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .hero-badge .badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        background: linear-gradient(45deg, #dc3545, #ff6b6b);
+        border: none;
+    }
+
+    .hero-buttons .btn {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-buttons .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Dark Mode Background */
+    color: #fff;
+}
+
+body.dark-mode .hero-text h1 {
+    color: #fff;
+}
+
+body.dark-mode .hero-text p {
+    color: #ccc;
+}
+
+body.dark-mode .hero-btn-secondary {
+    border-color: #fff;
+    color: #fff;
+}
+
+body.dark-mode .hero-btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hero-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* STATS */
+.home2-stats {
+    background: #f8f9fa;
+    padding: 60px 0;
+    color: #111;
+}
+
+.home2-stats h2 {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* PROGRAMS */
+.home2-programs {
+    padding: 80px 0;
+}
+
+.program-box {
+    background: #ffffff;
+    /* Light Mode */
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+    color: #111;
+    /* Dark Text */
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.program-box i {
+    font-size: 40px;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.program-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(220, 53, 69, 0.15);
+}
+
+/* CTA */
+.home2-cta {
+    background: #f8f9fa;
+    /* Light Background */
+    padding: 80px 0;
+    color: #111;
+    /* Dark Text */
+}
+
+.home2-features {
+    background-color: #f8f9fa;
+}
+
+/* Media Query */
+
+
+@media (max-width: 1200px) {
+
+    /* Tablet View - Fix navbar positioning */
+    .menu-navbar {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .menu-navbar ul {
+        flex-direction: column !important;
+        /* Stack vertically */
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px !important;
+    }
+
+    .navbar-brand img {
+        max-height: 35px;
+    }
+
+    /* Fix menu overlay */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100vh;
+        background-color: #212529;
+        /* Match navbar-dark bg-dark */
+        z-index: 9999;
+        padding: 1rem;
+        /* Flexbox for perfect centering of ALL content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* --- ROBUST JS-DRIVEN ANIMATION LOGIC --- */
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        /* Flex Alignment */
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #212529;
+    }
+
+    /* Force display when opening, open, or closing */
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: flex !important;
+        height: 100vh !important;
+        transition: none !important;
+        /* Kill Bootstrap transitions */
+    }
+
+    /* OPENING: trigger based on body class added by JS */
+    body.mobile-menu-open .navbar-collapse.collapsing {
+        animation: mobileMenuSlideIn 0.3s ease-out forwards;
+    }
+
+    /* CLOSING: trigger based on body class added by JS */
+    body.mobile-menu-closing .navbar-collapse.collapsing {
+        animation: mobileMenuSlideOut 0.3s ease-in forwards;
+    }
+
+    /* FULLY OPEN State */
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Ensure opacity starts at 0 for collapsing to allow animation to take over */
+    .navbar-collapse.collapsing {
+        opacity: 1;
+        transform: translateY(0);
+        /* Default, animation will override */
+    }
+
+    /* KEYFRAMES */
+    @keyframes mobileMenuSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes mobileMenuSlideOut {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Hamburger logic */
+    .navbar-toggler[aria-expanded="true"] {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+    }
+
+    .navbar-toggler {
+        z-index: 10001;
+        /* Above overlay */
+    }
+
+    /* Ensure Close Button is Always on Top and Clickable */
+    .navbar-collapse .btn-close {
+        z-index: 10000 !important;
+        /* Higher than collapse container */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+        /* Ensure visibility */
+    }
+
+    /* Center the Right Actions (Sign Up, Dashboard, Toggle) */
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+        gap: 15px;
+        /* Add spacing between buttons */
+        margin-top: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        width: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 !important;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav button {
+        margin: 5px 0 !important;
+        /* Stack vertically with spacing */
+        display: inline-block;
+    }
+
+    /* Ensure vertical stacking and centering happens INSIDE the collapse */
+    .menu-navbar {
+        min-height: auto;
+        /* Remove 100% height to prevent pushing buttons down */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        /* Adjust spacing between menu and buttons */
+    }
+
+    .menu-navbar .nav-link {
+        font-size: 1.25rem !important;
+        /* Larger text for mobile */
+        padding: 10px 0 !important;
+    }
+
+    /* Hide hamburger when menu is OPEN (not collapsed) */
+    .navbar-toggler[aria-expanded="true"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Ensure Close Button is Always on Top and Clickable */
+    .navbar-collapse .btn-close {
+        z-index: 10000 !important;
+        /* Higher than collapse container */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+        /* Ensure visibility */
+    }
+}
+
+/* Fix Overlap on Small Desktops */
+@media (min-width: 1200px) and (max-width: 1350px) {
+    .menu-navbar ul {
+        gap: 2px !important;
+    }
+
+    .navbar-collapse li {
+        padding: 0 1px !important;
+    }
+
+    .menu-navbar .nav-link {
+        font-size: 13px !important;
+        padding: 8px 4px !important;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .choose .col-7,
+    .col-5 {
+        width: 100%
+    }
+
+    /* Fix Navbar on Mobile */
+    .menu-navbar {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .menu-navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-brand img {
+        max-height: 35px;
+    }
+
+    /* HOME 2 FEATURES - Full width on tablet and mobile */
+    .home2-features .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .home2-features .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .col-6 {
+        width: 100%;
+    }
+
+    /* Center Mission and Vision on Mobile/Tablet */
+    .abt-class .col-6 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .abt-class .col-6:last-child {
+        margin-bottom: 0;
+    }
+
+    .abt-class img {
+        margin-bottom: 15px;
+    }
+
+    /* Responsive Footer */
+    footer {
+        text-align: center;
+    }
+
+    footer h5 {
+        margin-top: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+        display: flex;
+    }
+
+    .col-lg-3 {
+        margin-bottom: 30px;
+    }
+
+    /* Responsive About Section Headings */
+    .about h6 {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .about h3 {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        font-size: 32px;
+    }
+}
+
+/* Hover Dropdown for Desktop */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    /* Perfect Centering */
+    .navbar-nav.mx-auto {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 
 /* Home2 Hero Responsive - Center align for tablet and mobile */
 @media (max-width: 991px) {
