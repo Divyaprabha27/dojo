@@ -21,7 +21,7 @@
 <body>
 
   <!-- Top Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-custom navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center text-danger" style="font-size: 1.25rem;font-weight: bold;"
         href="index.html">
@@ -29,12 +29,12 @@
         Dragon Dojo
       </a>
       <div class="ms-auto d-flex align-items-center">
-        <button id="themeToggle" class="theme-btn d-lg-none me-2">🌙</button>
+        <button id="themeToggle" class="theme-btn d-custom-none me-2">🌙</button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardSidebar">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div class="ms-auto d-none d-lg-block">
+      <div class="ms-auto d-custom-block">
         <button id="themeToggleDesktop" class="theme-btn me-3">🌙</button>
       </div>
     </div>
@@ -47,14 +47,14 @@
     <div class="row">
 
       <!-- Sidebar -->
-      <div class="col-md-2 sidebar d-lg-block">
-        <div class="sidebar-header d-lg-none">
+      <div class="col-md-2 sidebar">
+        <div class="sidebar-header d-custom-none">
           <button id="closeSidebar" class="close-btn">
             <i class="fas fa-times"></i>
           </button>
         </div>
         <!-- Mobile/Tablet Sidebar (Collapsible) -->
-        <div class="collapse navbar-collapse d-lg-none" id="dashboardSidebar">
+        <div class="collapse navbar-collapse" id="dashboardSidebar">
           <div class="sidebar-mobile">
 
             <a href="#" data-content="dashboard" class="active">
@@ -88,7 +88,7 @@
         </div>
 
         <!-- Desktop sidebar (visible on large screens) -->
-        <div class="d-none d-lg-block">
+        <div class="d-custom-block">
           <a href="#" data-content="dashboard" class="active">
             <i class="fas fa-home me-2"></i> Dashboard
           </a>

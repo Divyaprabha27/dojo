@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 4. Auto-close on link click (Mobile)
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < 1025) {
           bsCollapse.hide();
         }
       });
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 5. Handle Resize
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth >= 1025) {
         dashboardSidebar.closest('.sidebar').classList.remove('show');
         if (sidebarBackdrop) sidebarBackdrop.classList.remove('show');
         document.body.style.overflow = '';
